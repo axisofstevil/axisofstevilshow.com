@@ -1,11 +1,11 @@
-title: The Axis of Stevil Show
+title: The Axis of Stevil Show and Tell
 email: steven@axisofstevil.com
 description: >
-  Write an awesome, super description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  The Axis of Stevil Show and Tell will show you the best things to see
+  on the internet, show you the worst things to see on the internet,
+  and show you some things you didn't know existed.
 baseurl: ""
-url: "https://axisofstevilshow.com"
+url: "https://www.axisofstevilshow.com"
 
 # Build settings
 markdown: kramdown
