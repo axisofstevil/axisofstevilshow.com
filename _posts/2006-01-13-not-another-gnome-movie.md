@@ -1,10 +1,11 @@
 ---
-title: Not Another A Gnome Movie
+title: "Not Another A Gnome Movie"
 date: 2006-01-13 06:00:00
 keywords: david, escobar, swift, field, gnome
 original_url: http://www.axisofstevil.com/p/not-another-gnome-movie
 image: /assets/gnomeface.jpg
 slug: not-another-gnome-movie
+layout: post
 ---
 
 It was a wildly sorted affair in the village of Wickerbriar David the Gnome a respected doctor and community leader was exposed as fathering an illegitimate child with the young Lisa Curvet, a 175-year-old gnome At one point farmer Kurvalt, Lisa’s troll stepfather, had threatened to eat David should he ever get near his daughter With nothing else to do, David fled town one summer’s January night Accompanied by his oldest friend, Swift, the pair set out to seek their fortunes and find their future in the wild world

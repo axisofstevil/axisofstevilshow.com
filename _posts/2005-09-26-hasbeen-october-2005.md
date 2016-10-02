@@ -1,10 +1,11 @@
 ---
-title: On Newstands Today!
+title: "On Newstands Today!"
 date: 2005-09-26 05:00:00
 keywords: game, icarus, hard, right, films
 original_url: http://www.axisofstevil.com/p/hasbeen-october-2005
 image: /assets/hasbeencoverweb.jpg
 slug: hasbeen-october-2005
+layout: post
 ---
 
 Some characters will always hang in the mind These quirky and identifiable icons of film and television can, for a time, capture the heart of a nation These characters, often, abruptly fall from the public spot light and become forgotten What happened to Dudley Do-Right Did Growing Pain’s Boner ever find a girl

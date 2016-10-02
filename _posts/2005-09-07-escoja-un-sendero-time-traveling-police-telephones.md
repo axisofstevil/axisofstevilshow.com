@@ -1,10 +1,11 @@
 ---
-title: What Will You Do?
+title: "What Will You Do?"
 date: 2005-09-07 05:00:00
 keywords: time, movie, captain, crowd, adventure
 original_url: http://www.axisofstevil.com/p/escoja-un-sendero-time-traveling-police-telephones
 image: /assets/escoja-timetravellarge.gif
 slug: escoja-un-sendero-time-traveling-police-telephones
+layout: post
 ---
 
 Learning to make decisions is an important part of growing up Train the young and the young at heart, to make the best decisions in life by reading The Axis of Stevil ¡Escoja Un Sendero Adventure Series, These exciting adventures will show how many infinite possibilities of adventure can be created from a simple mistake

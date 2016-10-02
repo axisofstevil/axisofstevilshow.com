@@ -1,10 +1,11 @@
 ---
-title: Bi.a.h.s Convention 2005
+title: "Bi.a.h.s Convention 2005"
 date: 2005-11-21 06:00:00
 keywords: hunter, douglas, local, aociation, merkin
 original_url: http://www.axisofstevil.com/p/biah-convention-2005
 image: /assets/hermitconvention.jpg
 slug: biah-convention-2005
+layout: post
 ---
 
 Attendance was poor at this past weekend’s BiAHs Convention 2005 Blame for the failure was placed on the following email that, according to sources close with the union, “says too much” The email was circulated to over 40,000 homebound people Sadly, due to the author’s name it was filtered as spam on almost every junk mail program

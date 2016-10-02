@@ -1,10 +1,11 @@
 ---
-title: Seeing Is Believing
+title: "Seeing Is Believing"
 date: 2005-04-18 05:00:00
 keywords: axis, stevil, world, good, life
 original_url: http://www.axisofstevil.com/p/seeing-is-believing
 image: /assets/Seeingpenguinweb.jpg
 slug: seeing-is-believing
+layout: post
 ---
 
 Lean into life, don&#039;t take life as it comes Don&#039;t get bogged down by the message being thrown at you know better; see better The Media wants to consume you It wants to sell you a bleak picture that only coke, and some Reboxes can fix It wants to give you a world where you can move from city to city and have the same tastes, the same shopping experience the same life It gives you a safe homogenized world Haven&#039;t you heard this before This is not an original thought Why haven&#039;t you picked up on the warnings Why haven&#039;t you seen that McDonald&#039;s seeks to own your immortal soul The media is trying to control you Tune in now Think how many times you&#039;ve heard it called the idiot box, how many times must you be told you are being sold a lie before you believe it Trust the world outside, the world you can see, taste, smell and vibrate within Not the world that comes to you behind a glass window That is not to say you can&#039;t watch TV Just be aware of the message, and don&#039;t soak it up Your outlook on life will dramatically increase, you will rejoin humanities side, and not that of what is eventual to cause your doom You&#039;ll start to notice the people who you were just like When you do, shout the message, tell them about the joys of life, and the future ahead If they notice, good for them, it&#039;s another freed soul If not, don&#039;t dwell you can&#039;t change people Continue believing in the right cause and teach by example If we are forced to be, we had might as well be happy

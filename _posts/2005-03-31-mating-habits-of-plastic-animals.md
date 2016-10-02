@@ -1,10 +1,11 @@
 ---
-title: Mating Habits Of Plastic Animals
+title: "Mating Habits Of Plastic Animals"
 date: 2005-03-31 06:00:00
 keywords: polymerkious, plastic, species, stevil, aetsmousetrapxjpg
 original_url: http://www.axisofstevil.com/p/mating-habits-of-plastic-animals
 image: /assets/mousetrapweb.jpg
 slug: mating-habits-of-plastic-animals
+layout: post
 ---
 
 Axis of Stevil not only stands for the arts, but also for our environment The endangered species list is growing larger every day It is the priority of the Axis of Stevil Environmental Specialist Committee to take every step to help the lesser-known endangered species Recent studies show a dramatic change in the number of such species as, The Hi-Ho-cheerio tree, Ewoks, and most importantly the Sanspod Polymerkious

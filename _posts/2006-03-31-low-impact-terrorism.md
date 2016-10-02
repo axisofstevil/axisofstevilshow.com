@@ -1,10 +1,11 @@
 ---
-title: Low Impact Terrorism
+title: "Low Impact Terrorism"
 date: 2006-03-31 06:00:00
 keywords: impact, terrorist, terrorism, just, subscription
 original_url: http://www.axisofstevil.com/p/low-impact-terrorism
 image: /assets/lowimpact.jpg
 slug: low-impact-terrorism
+layout: post
 ---
 
 In recent weeks The Axis of Stevil has noticed an increase in the level of terrorist chatter Several creditable threats in the form of magazine order cards have been intercepted that show a swelling of entry-level terrorist support Be aware of low impact terrorist organizations that seek to draw upon the sympathies of evil and unmotivated men The following press release was found in a raid of a terrorist compound outside of Jamestown, MA

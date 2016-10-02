@@ -1,10 +1,11 @@
 ---
-title: Ruxpin&#039;s Plight
+title: "Ruxpin&#039;s Plight"
 date: 2005-03-29 06:00:00
 keywords: fore, ruxpinanda, axis, valley, stevil
 original_url: http://www.axisofstevil.com/p/ruxpins-plight
 image: /assets/ninjaRuxpin440x300.jpg
 slug: ruxpins-plight
+layout: post
 ---
 
 In early 1985, Ken Forsse on a wilderness expedition in the Yukon stumbled upon a secret valley nestled within a volcanic crater The sub terrain lava flows made the ecosystem of the valley a lush tropical rain forest Forsse discovered in this forest a race of advance bear pygmies who called themselves the Ruxpinanda Kind and peace loving, the Ruxpinanda took Forsse into their society and taught him their ways The Ruxpinanda, as Forsse later remarked,
