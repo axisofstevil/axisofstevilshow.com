@@ -7,6 +7,11 @@ description: >
 baseurl: ""
 url: "https://www.axisofstevilshow.com"
 
+contact_address:
+  - '228 Park Ave S #66165'
+  - 'New York, NY 10003-1502'
+  - 'USA'
+
 # Build settings
 markdown: kramdown
 

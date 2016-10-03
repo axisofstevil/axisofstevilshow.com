@@ -1,19 +1,37 @@
-<footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-3">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-          <li>subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></li>
-        </ul>
+<!-- Footer -->
+<div id="footer-wrapper">
+  <footer id="footer" class="container">
+    <div class="row">
+      <div class="12u 12u$(small)">
+        <section class="widget contact last">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><a class="icon fa-twitter" href="https://twitter.com/AxisofStevil" ><span class="label">Twitter</span></a></li>
+            <li><a class="icon fa-facebook" href="https://facebook.com/AxisofStevil"><span class="label">Facebook</span></a></li>
+            <li><a class="icon fa-vimeo" href="https://vimeo.com/axisofstevil"><span class="label">Vimeo</span></a></li>
+            <li><a class="icon fa-github" href="https://github.com/axisofstevil"><span class="label">Github</span></a></li>
+            <li><a class="icon fa-envelope" href="mailto:{{ site.email }}"><span class="label">Email</span></a></li>
+            <li><a class="icon fa-feed" href="{{ "/feed.xml" | prepend: site.baseurl }}"><span class="label">Subscribe via RSS</span></a></li>
+          </ul>
+          <p>{{ site.title }}, {{site.contact_address | join: ', '}}</p>
+        </section>
       </div>
     </div>
+      <div class="row">
+      <div class="12u">
+        <div id="copyright">
+          <ul class="menu">
+            <li>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
 
-  </div>
-
-</footer>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/jquery.dropotron.min.js"></script>
+<script src="/js/skel.min.js"></script>
+<script src="/js/util.js"></script>
+<!--[if lte IE 8]><script src="/js/ie/respond.min.js"></script><![endif]-->
+<script src="/js/main.js"></script>
