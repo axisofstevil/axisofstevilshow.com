@@ -3,7 +3,7 @@ title: "Facebook: Gotta Catch &#039;em All!"
 date: 2005-10-10 05:00:00
 keywords: energy, drome, gihy, pool, oaks
 original_url: http://www.axisofstevil.com/p/facebook-gotta-catch-em-all
-image: /assets/facebookmon.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/facebookmon.jpg"
 slug: facebook-gotta-catch-em-all
 layout: post
 ---

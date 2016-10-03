@@ -3,7 +3,7 @@ title: "Vulgar Display Of Flour"
 date: 2006-08-09 05:00:00
 keywords: pantera, abbot, bread, squarepants, sandwiches
 original_url: http://www.axisofstevil.com/p/vulgar-display-of-flour
-image: /assets/PanteraBread.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/PanteraBread.jpg"
 slug: vulgar-display-of-flour
 layout: post
 ---

@@ -3,7 +3,7 @@ title: "Slang Hypes You Up"
 date: 2006-04-10 05:00:00
 keywords: slang, drinks, public, caffeine, energy
 original_url: http://www.axisofstevil.com/p/slang-hypes-you-up
-image: /assets/slangcoflowchart.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/slangcoflowchart.jpg"
 slug: slang-hypes-you-up
 layout: post
 ---

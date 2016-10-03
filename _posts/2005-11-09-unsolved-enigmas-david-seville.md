@@ -3,7 +3,7 @@ title: "Unsolved Enigmas"
 date: 2005-11-09 06:00:00
 keywords: seville, alvin, david, life, murder
 original_url: http://www.axisofstevil.com/p/unsolved-enigmas-david-seville
-image: /assets/unsolvedsevilleweb.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/unsolvedsevilleweb.jpg"
 slug: unsolved-enigmas-david-seville
 layout: post
 ---

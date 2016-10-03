@@ -3,7 +3,7 @@ title: "Stink No Longer"
 date: 2006-03-20 06:00:00
 keywords: symptoms, year, peltmegaly, clean, know
 original_url: http://www.axisofstevil.com/p/stink-no-longer
-image: /assets/hippieintervention.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/hippieintervention.jpg"
 slug: stink-no-longer
 layout: post
 ---

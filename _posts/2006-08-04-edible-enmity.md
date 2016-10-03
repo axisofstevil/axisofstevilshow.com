@@ -3,7 +3,7 @@ title: "Edible Enmity"
 date: 2006-08-04 05:00:00
 keywords: cheese, cheeses, velveeta, market, wensleydale
 original_url: http://www.axisofstevil.com/p/edible-enmity
-image: /assets/vforvelveeta.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/vforvelveeta.jpg"
 slug: edible-enmity
 layout: post
 ---

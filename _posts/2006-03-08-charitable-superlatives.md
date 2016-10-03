@@ -3,7 +3,7 @@ title: "Charitable Superlatives"
 date: 2006-03-08 06:00:00
 keywords: problem, drivers, society, victorian, hard
 original_url: http://www.axisofstevil.com/p/charitable-superlatives
-image: /assets/charity.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/charity.jpg"
 slug: charitable-superlatives
 layout: post
 ---

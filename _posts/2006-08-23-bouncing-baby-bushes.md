@@ -3,7 +3,7 @@ title: "Bouncing Baby Bushes"
 date: 2006-08-23 05:00:00
 keywords: stevil, axis, steve, republicans, little
 original_url: http://www.axisofstevil.com/p/bouncing-baby-bushes
-image: /assets/MakeLove.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/MakeLove.jpg"
 slug: bouncing-baby-bushes
 layout: post
 ---

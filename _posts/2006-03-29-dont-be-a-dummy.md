@@ -3,7 +3,7 @@ title: "Don&#039;t Be A Dummy"
 date: 2006-03-29 06:00:00
 keywords: decoy, child, allow, people, high
 original_url: http://www.axisofstevil.com/p/dont-be-a-dummy
-image: /assets/babyEDS.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/babyEDS.jpg"
 slug: dont-be-a-dummy
 layout: post
 ---

@@ -3,7 +3,7 @@ title: "Wombat Dating!"
 date: 2005-06-24 05:00:00
 keywords: wombat, wombats, creature, social, aware
 original_url: http://www.axisofstevil.com/p/wombat-dating
-image: /assets/wombatdatinglarge.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/wombatdatinglarge.jpg"
 slug: wombat-dating
 layout: post
 ---

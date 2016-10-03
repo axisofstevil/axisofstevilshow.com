@@ -3,7 +3,7 @@ title: "Think Of The Whales!"
 date: 2005-06-22 05:00:00
 keywords: luck, modern, shits, large, predicted
 original_url: http://www.axisofstevil.com/p/think-of-the-whales
-image: /assets/whalesavelarge.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/whalesavelarge.jpg"
 slug: think-of-the-whales
 layout: post
 ---

@@ -3,7 +3,7 @@ title: "Trouble In Malltropolis"
 date: 2006-05-10 05:00:00
 keywords: clubbed, seal, walrus, mouth, results
 original_url: http://www.axisofstevil.com/p/trouble-in-malltropolis
-image: /assets/clubbedseal.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/clubbedseal.jpg"
 slug: trouble-in-malltropolis
 layout: post
 ---

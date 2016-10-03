@@ -3,7 +3,7 @@ title: "Extreme Hoopin&#039;"
 date: 2005-08-08 05:00:00
 keywords: extreme, hoop, woodsy, sport, national
 original_url: http://www.axisofstevil.com/p/extreme-hoopin
-image: /assets/extremehoopinglarge.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/extremehoopinglarge.jpg"
 slug: extreme-hoopin
 layout: post
 ---

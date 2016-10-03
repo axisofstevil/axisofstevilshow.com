@@ -3,7 +3,7 @@ title: "In The Spotlight: Carlton"
 date: 2005-06-10 05:00:00
 keywords: carlton, water, mole, felt, purple
 original_url: http://www.axisofstevil.com/p/in-the-spotlight-carlton
-image: /assets/CarltonSea.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/CarltonSea.jpg"
 slug: in-the-spotlight-carlton
 layout: post
 ---

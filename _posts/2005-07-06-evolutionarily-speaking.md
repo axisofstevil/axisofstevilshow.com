@@ -3,7 +3,7 @@ title: "Case Study No. 2004341-919"
 date: 2005-07-06 05:00:00
 keywords: trapper, keeper, keepers, paper, binding
 original_url: http://www.axisofstevil.com/p/evolutionarily-speaking
-image: /assets/bindevolarge.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/bindevolarge.jpg"
 slug: evolutionarily-speaking
 layout: post
 ---

@@ -3,7 +3,7 @@ title: "Join The Revolution"
 date: 2006-05-03 05:00:00
 keywords: limbo, game, building, james, play
 original_url: http://www.axisofstevil.com/p/join-the-revolution
-image: /assets/LLR.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/LLR.jpg"
 slug: join-the-revolution
 layout: post
 ---

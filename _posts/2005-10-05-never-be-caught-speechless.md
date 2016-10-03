@@ -3,7 +3,7 @@ title: "Never Be Caught Speechless!"
 date: 2005-10-05 05:00:00
 keywords: panda, pocket, nervousnebecause, fact, axis
 original_url: http://www.axisofstevil.com/p/never-be-caught-speechless
-image: /assets/pandabooklarge.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/pandabooklarge.jpg"
 slug: never-be-caught-speechless
 layout: post
 ---

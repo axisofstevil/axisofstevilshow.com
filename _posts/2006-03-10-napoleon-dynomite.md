@@ -3,7 +3,7 @@ title: "Dy-no-mite!"
 date: 2006-03-10 06:00:00
 keywords: dynamite, napoleon, factory, guaranteed, brand
 original_url: http://www.axisofstevil.com/p/napoleon-dynomite
-image: /assets/napoleondynamite.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/napoleondynamite.jpg"
 slug: napoleon-dynomite
 layout: post
 ---

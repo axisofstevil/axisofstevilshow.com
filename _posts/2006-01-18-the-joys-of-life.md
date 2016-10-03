@@ -3,7 +3,7 @@ title: "The Joys Of Life"
 date: 2006-01-18 06:00:00
 keywords: doozers, doozer, fraggle, life, dunkin
 original_url: http://www.axisofstevil.com/p/the-joys-of-life
-image: /assets/joyofdoozers.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/joyofdoozers.jpg"
 slug: the-joys-of-life
 layout: post
 ---

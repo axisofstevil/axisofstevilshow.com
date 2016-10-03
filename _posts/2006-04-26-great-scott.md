@@ -3,7 +3,7 @@ title: "Great Scott"
 date: 2006-04-26 05:00:00
 keywords: gigalibre, results, monster, data, internet
 original_url: http://www.axisofstevil.com/p/great-scott
-image: /assets/surveymonster.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/surveymonster.jpg"
 slug: great-scott
 layout: post
 ---

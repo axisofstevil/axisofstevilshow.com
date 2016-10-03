@@ -3,7 +3,7 @@ title: "Mating Habits Of Plastic Animals"
 date: 2005-03-31 06:00:00
 keywords: polymerkious, plastic, species, stevil, aetsmousetrapxjpg
 original_url: http://www.axisofstevil.com/p/mating-habits-of-plastic-animals
-image: /assets/mousetrapweb.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/mousetrapweb.jpg"
 slug: mating-habits-of-plastic-animals
 layout: post
 ---

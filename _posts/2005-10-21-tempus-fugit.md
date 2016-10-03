@@ -3,7 +3,7 @@ title: "Tempus Fugit"
 date: 2005-10-21 05:00:00
 keywords: burglar, time, lantern, hamburglar, creature
 original_url: http://www.axisofstevil.com/p/tempus-fugit
-image: /assets/timeburglerlarge.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/timeburglerlarge.jpg"
 slug: tempus-fugit
 layout: post
 ---

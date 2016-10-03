@@ -3,7 +3,7 @@ title: "What Will You Do?"
 date: 2005-09-07 05:00:00
 keywords: time, movie, captain, crowd, adventure
 original_url: http://www.axisofstevil.com/p/escoja-un-sendero-time-traveling-police-telephones
-image: /assets/escoja-timetravellarge.gif
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/escoja-timetravellarge.gif"
 slug: escoja-un-sendero-time-traveling-police-telephones
 layout: post
 ---

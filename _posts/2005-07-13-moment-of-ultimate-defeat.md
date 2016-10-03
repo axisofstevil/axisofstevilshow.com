@@ -3,7 +3,7 @@ title: "Moment Of Ultimate Defeat"
 date: 2005-07-13 05:00:00
 keywords: creature, masticophis, probability, luck, rating
 original_url: http://www.axisofstevil.com/p/moment-of-ultimate-defeat
-image: /assets/digestiowndlarge.gif
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/digestiowndlarge.gif"
 slug: moment-of-ultimate-defeat
 layout: post
 ---

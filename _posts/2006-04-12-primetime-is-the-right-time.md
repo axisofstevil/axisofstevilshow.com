@@ -3,7 +3,7 @@ title: "Primetime Is The Right Time"
 date: 2006-04-12 05:00:00
 keywords: walton, challenge, show, family, work
 original_url: http://www.axisofstevil.com/p/primetime-is-the-right-time
-image: /assets/waltonsweb.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/waltonsweb.jpg"
 slug: primetime-is-the-right-time
 layout: post
 ---

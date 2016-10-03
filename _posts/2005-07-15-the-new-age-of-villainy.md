@@ -3,7 +3,7 @@ title: "The New Age Of Villainy"
 date: 2005-07-15 05:00:00
 keywords: game, games, bear, icons, plot
 original_url: http://www.axisofstevil.com/p/the-new-age-of-villainy
-image: /assets/DarkerBrothers.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/DarkerBrothers.jpg"
 slug: the-new-age-of-villainy
 layout: post
 ---

@@ -3,7 +3,7 @@ title: "U.f.n. Sighting!"
 date: 2005-09-02 05:00:00
 keywords: nuns, flying, known, catholic, ability
 original_url: http://www.axisofstevil.com/p/ufn-sighting
-image: /assets/flyingnunlarge.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/flyingnunlarge.jpg"
 slug: ufn-sighting
 layout: post
 ---

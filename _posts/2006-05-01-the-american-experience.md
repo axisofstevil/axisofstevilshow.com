@@ -3,7 +3,7 @@ title: "The American Experience"
 date: 2006-05-01 05:00:00
 keywords: american, leatherheads, golf, hardly, experience
 original_url: http://www.axisofstevil.com/p/the-american-experience
-image: /assets/leatherhead.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/leatherhead.jpg"
 slug: the-american-experience
 layout: post
 ---

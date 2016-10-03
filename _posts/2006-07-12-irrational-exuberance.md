@@ -3,7 +3,7 @@ title: "Irrational Exuberance"
 date: 2006-07-12 05:00:00
 keywords: park, outhouse, congreman, valley, trails
 original_url: http://www.axisofstevil.com/p/irrational-exuberance
-image: /assets/July13th2006.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/July13th2006.jpg"
 slug: irrational-exuberance
 layout: post
 ---

@@ -3,7 +3,7 @@ title: "Battle The Odds"
 date: 2005-05-11 05:00:00
 keywords: game, download, social, wallpaper
 original_url: http://www.axisofstevil.com/p/battle-the-odds
-image: /assets/guesswhoown3dweb.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/guesswhoown3dweb.jpg"
 slug: battle-the-odds
 layout: post
 ---

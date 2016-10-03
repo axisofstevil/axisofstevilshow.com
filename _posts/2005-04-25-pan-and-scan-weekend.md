@@ -3,7 +3,7 @@ title: "Pan And Scan Weekend"
 date: 2005-04-25 05:00:00
 keywords: wallpaper, download, stevil, panscanid, eyes
 original_url: http://www.axisofstevil.com/p/pan-and-scan-weekend
-image: /assets/1990webpub.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/1990webpub.jpg"
 slug: pan-and-scan-weekend
 layout: post
 ---

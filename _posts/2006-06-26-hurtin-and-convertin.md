@@ -3,7 +3,7 @@ title: "Hurtin&#039; And Convertin&#039;"
 date: 2006-06-26 05:00:00
 keywords: games, holy, video, sport, fighter
 original_url: http://www.axisofstevil.com/p/hurtin-and-convertin
-image: /assets/holyhostility.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/holyhostility.jpg"
 slug: hurtin-and-convertin
 layout: post
 ---

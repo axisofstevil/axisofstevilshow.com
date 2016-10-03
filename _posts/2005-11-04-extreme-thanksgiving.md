@@ -3,7 +3,7 @@ title: "Extreme Thanksgiving"
 date: 2005-11-04 06:00:00
 keywords: viacom, thanksgiving, month, history, womens
 original_url: http://www.axisofstevil.com/p/extreme-thanksgiving
-image: /assets/extremeturkeylarge.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/extremeturkeylarge.jpg"
 slug: extreme-thanksgiving
 layout: post
 ---

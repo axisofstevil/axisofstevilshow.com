@@ -3,7 +3,7 @@ title: "The Lesser Of Two Googles"
 date: 2005-07-20 05:00:00
 keywords: google, surveillance, people, clear, googles
 original_url: http://www.axisofstevil.com/p/the-lesser-of-two-googles
-image: /assets/pigterrorlarge.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/pigterrorlarge.jpg"
 slug: the-lesser-of-two-googles
 layout: post
 ---

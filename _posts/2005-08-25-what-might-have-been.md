@@ -3,7 +3,7 @@ title: "What Might Have Been"
 date: 2005-08-25 05:00:00
 keywords: take, monkey, monkeys, chimp, world
 original_url: http://www.axisofstevil.com/p/what-might-have-been
-image: /assets/lightmonkeylarge.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/lightmonkeylarge.jpg"
 slug: what-might-have-been
 layout: post
 ---

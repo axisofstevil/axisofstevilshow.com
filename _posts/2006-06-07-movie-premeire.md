@@ -3,7 +3,7 @@ title: "Movie Premeire"
 date: 2006-06-07 05:00:00
 keywords: talway, service, cabin, lodge, luck
 original_url: http://www.axisofstevil.com/p/movie-premeire
-image: /assets/skinoevil.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/skinoevil.jpg"
 slug: movie-premeire
 layout: post
 ---

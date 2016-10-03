@@ -3,7 +3,7 @@ title: "Pig On A Dig"
 date: 2006-02-13 06:00:00
 keywords: luvy, canal, lyman, tanker, water
 original_url: http://www.axisofstevil.com/p/pig-on-a-dig
-image: /assets/jomarbuckle.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/jomarbuckle.jpg"
 slug: pig-on-a-dig
 layout: post
 ---

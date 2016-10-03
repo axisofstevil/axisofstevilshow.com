@@ -3,7 +3,7 @@ title: "Keepin It Real"
 date: 2005-04-13 05:00:00
 keywords: fish, bigger, axis, stevil, coloring
 original_url: http://www.axisofstevil.com/p/keepin-it-real
-image: /assets/Beware-of-bigger-fish-800.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/Beware-of-bigger-fish-800.jpg"
 slug: keepin-it-real
 layout: post
 ---

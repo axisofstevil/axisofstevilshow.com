@@ -3,7 +3,7 @@ title: "Bi.a.h.s Convention 2005"
 date: 2005-11-21 06:00:00
 keywords: hunter, douglas, local, aociation, merkin
 original_url: http://www.axisofstevil.com/p/biah-convention-2005
-image: /assets/hermitconvention.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/hermitconvention.jpg"
 slug: biah-convention-2005
 layout: post
 ---

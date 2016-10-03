@@ -3,7 +3,7 @@ title: "The New Deal"
 date: 2006-05-08 05:00:00
 keywords: generic, mandel, bobby, deal, show
 original_url: http://www.axisofstevil.com/p/the-new-deal
-image: /assets/bobbysdeal.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/bobbysdeal.jpg"
 slug: the-new-deal
 layout: post
 ---

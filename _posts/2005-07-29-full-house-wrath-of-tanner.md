@@ -3,7 +3,7 @@ title: "Full House: Wrath Of Tanner"
 date: 2005-07-29 05:00:00
 keywords: tanner, magic, danny, house, pack
 original_url: http://www.axisofstevil.com/p/full-house-wrath-of-tanner
-image: /assets/magic.gif
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/magic.gif"
 slug: full-house-wrath-of-tanner
 layout: post
 ---

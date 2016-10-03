@@ -3,7 +3,7 @@ title: "P.b.c. And You"
 date: 2005-06-17 05:00:00
 keywords: banana, hammock, beach, name, spiedo
 original_url: http://www.axisofstevil.com/p/pbc-and-you
-image: /assets/bananahammocklarge.gif
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/bananahammocklarge.gif"
 slug: pbc-and-you
 layout: post
 ---

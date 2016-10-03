@@ -3,7 +3,7 @@ title: "Not Another A Gnome Movie"
 date: 2006-01-13 06:00:00
 keywords: david, escobar, swift, field, gnome
 original_url: http://www.axisofstevil.com/p/not-another-gnome-movie
-image: /assets/gnomeface.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/gnomeface.jpg"
 slug: not-another-gnome-movie
 layout: post
 ---

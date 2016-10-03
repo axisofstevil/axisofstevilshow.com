@@ -3,7 +3,7 @@ title: "Injustice No More!"
 date: 2006-05-12 05:00:00
 keywords: cigarettes, smoke, break, imirette, smoking
 original_url: http://www.axisofstevil.com/p/injustice-no-more
-image: /assets/takebackyourbreak.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/takebackyourbreak.jpg"
 slug: injustice-no-more
 layout: post
 ---

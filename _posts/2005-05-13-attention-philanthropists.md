@@ -3,7 +3,7 @@ title: "Attention Philanthropists"
 date: 2005-05-13 05:00:00
 keywords: axis, stevil, shirts, succe, graham
 original_url: http://www.axisofstevil.com/p/attention-philanthropists
-image: /assets/sisb31600.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/sisb31600.jpg"
 slug: attention-philanthropists
 layout: post
 ---

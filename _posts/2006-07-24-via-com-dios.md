@@ -3,7 +3,7 @@ title: "Via Com Dios"
 date: 2006-07-24 05:00:00
 keywords: news, media, onion, fake, play
 original_url: http://www.axisofstevil.com/p/via-com-dios
-image: /assets/viacomdios.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/viacomdios.jpg"
 slug: via-com-dios
 layout: post
 ---

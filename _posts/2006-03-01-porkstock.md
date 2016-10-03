@@ -3,7 +3,7 @@ title: "Porkstock"
 date: 2006-03-01 06:00:00
 keywords: pork, festival, years, sandwich, mecklenburg
 original_url: http://www.axisofstevil.com/p/porkstock
-image: /assets/porkstock.jpg
+image: "https://d3e878vmunx8cm.cloudfront.net/assets/porkstock.jpg"
 slug: porkstock
 layout: post
 ---
