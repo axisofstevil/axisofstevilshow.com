@@ -13,7 +13,6 @@
             <li><a class="icon fa-envelope" href="mailto:{{ site.email }}"><span class="label">Email</span></a></li>
             <li><a class="icon fa-feed" href="{{ "/feed.xml" | prepend: site.baseurl }}"><span class="label">Subscribe via RSS</span></a></li>
           </ul>
-          <p>{{ site.title }}, {{site.contact_address | join: ', '}}</p>
         </section>
       </div>
     </div>
@@ -21,7 +20,7 @@
       <div class="12u">
         <div id="copyright">
           <ul class="menu">
-            <li>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved</li>
+            <li>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved. {{site.contact_address | join: ', '}}</li>
           </ul>
         </div>
       </div>
