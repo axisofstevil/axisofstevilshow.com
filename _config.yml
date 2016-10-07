@@ -15,4 +15,4 @@ contact_address:
 # Build settings
 markdown: kramdown
 
-permalink: /show/:path
+permalink: /show/:path/
