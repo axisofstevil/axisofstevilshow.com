@@ -1,6 +1,6 @@
 ---
 title: "Sadiler, But True"
-date: 2007-01-17 06:00:00
+date: 2007-01-17 00:00:00
 keywords: officer, buttons, head, animal, turkey
 original_url: http://www.axisofstevil.com/p/sadiler-but-true
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/Mindy.jpg"

@@ -1,6 +1,6 @@
 ---
 title: "The Death Of Satan"
-date: 2007-01-10 06:00:00
+date: 2007-01-10 00:00:00
 keywords: satan, east, martial, arts, back
 original_url: http://www.axisofstevil.com/p/the-death-of-satan
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/Herculekilled.jpg"

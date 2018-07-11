@@ -1,6 +1,6 @@
 ---
 title: "Sacks Of Fun!"
-date: 2006-06-23 05:00:00
+date: 2006-06-23 00:00:00
 keywords: buddy, ballzi, bonzi, time, purple
 original_url: http://www.axisofstevil.com/p/sacks-of-fun
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/ballzibuddy.jpg"

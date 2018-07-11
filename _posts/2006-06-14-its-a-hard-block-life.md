@@ -1,6 +1,6 @@
 ---
 title: "It&#039;s A Hard Block Life"
-date: 2006-06-14 05:00:00
+date: 2006-06-14 00:00:00
 keywords: bricks, brick, sando, blocks, cinder
 original_url: http://www.axisofstevil.com/p/its-a-hard-block-life
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/blockparty.jpg"

@@ -1,6 +1,6 @@
 ---
 title: "Not As Good As &#039;the Original&#039;"
-date: 2006-01-09 06:00:00
+date: 2006-01-09 00:00:00
 keywords: laugh, olympics, steroid, drug, gogo
 original_url: http://www.axisofstevil.com/p/not-as-good-as-the-original
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/landogogoweb.jpg"

@@ -1,6 +1,6 @@
 ---
 title: "Awww Skeet Skeet"
-date: 2005-11-02 06:00:00
+date: 2005-11-02 00:00:00
 keywords: valentine, skeeter, service, hosting, skeeters
 original_url: http://www.axisofstevil.com/p/awww-skeet-skeet
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/skeethostlarge.jpg"

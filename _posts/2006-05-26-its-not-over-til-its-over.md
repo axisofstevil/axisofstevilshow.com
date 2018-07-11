@@ -1,6 +1,6 @@
 ---
 title: "It&#039;s Not Over Til It&#039;s Over"
-date: 2006-05-26 05:00:00
+date: 2006-05-26 00:00:00
 keywords: time, photography, month, paper, point
 original_url: http://www.axisofstevil.com/p/its-not-over-til-its-over
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/stevilmosaicweb.jpg"

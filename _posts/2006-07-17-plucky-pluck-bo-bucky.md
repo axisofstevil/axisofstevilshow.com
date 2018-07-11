@@ -1,6 +1,6 @@
 ---
 title: "Plucky Plucky Bo Bucky!"
-date: 2006-07-17 05:00:00
+date: 2006-07-17 00:00:00
 keywords: plucky, game, duck, dance, name
 original_url: http://www.axisofstevil.com/p/plucky-pluck-bo-bucky
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/NameGamePlucky.jpg"

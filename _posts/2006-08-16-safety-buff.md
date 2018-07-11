@@ -1,6 +1,6 @@
 ---
 title: "Safety Buff"
-date: 2006-08-16 05:00:00
+date: 2006-08-16 00:00:00
 keywords: dari, flight, travel, private, good
 original_url: http://www.axisofstevil.com/p/safety-buff
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/DariAir.jpg"

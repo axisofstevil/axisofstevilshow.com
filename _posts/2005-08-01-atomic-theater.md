@@ -1,6 +1,6 @@
 ---
 title: "Atomic Theater"
-date: 2005-08-01 05:00:00
+date: 2005-08-01 00:00:00
 keywords: atom, paying, attention, basic, theater
 original_url: http://www.axisofstevil.com/p/atomic-theater
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/atomictheatrelarge.jpg"

@@ -1,6 +1,6 @@
 ---
 title: "Power Struggle"
-date: 2006-01-30 06:00:00
+date: 2006-01-30 00:00:00
 keywords: city, megakat, swat, bone, razor
 original_url: http://www.axisofstevil.com/p/power-struggle
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/swatkatstakeover.jpg"

@@ -1,6 +1,6 @@
 ---
 title: "Ewe Asked For It"
-date: 2007-05-09 05:00:00
+date: 2007-05-09 00:00:00
 keywords: seguh, game, consoles, really, player
 original_url: http://www.axisofstevil.com/p/ewe-asked-for-it
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/Seguh.jpg"

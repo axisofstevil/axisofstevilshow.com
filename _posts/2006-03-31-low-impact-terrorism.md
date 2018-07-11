@@ -1,6 +1,6 @@
 ---
 title: "Low Impact Terrorism"
-date: 2006-03-31 06:00:00
+date: 2006-03-31 00:00:00
 keywords: impact, terrorist, terrorism, just, subscription
 original_url: http://www.axisofstevil.com/p/low-impact-terrorism
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/lowimpact.jpg"

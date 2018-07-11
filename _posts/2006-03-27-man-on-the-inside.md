@@ -1,6 +1,6 @@
 ---
 title: "Man On The Inside"
-date: 2006-03-27 06:00:00
+date: 2006-03-27 00:00:00
 keywords: estevez, stevil, media, studio, meage
 original_url: http://www.axisofstevil.com/p/man-on-the-inside
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/insideman.jpg"

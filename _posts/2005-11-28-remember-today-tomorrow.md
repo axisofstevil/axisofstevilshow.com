@@ -1,6 +1,6 @@
 ---
 title: "Remember Today, Tomorrow!"
-date: 2005-11-28 06:00:00
+date: 2005-11-28 00:00:00
 keywords: kuno, bluetooth, phone, models, needs
 original_url: http://www.axisofstevil.com/p/remember-today-tomorrow
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/id10mpds.jpg"

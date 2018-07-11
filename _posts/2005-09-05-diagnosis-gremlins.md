@@ -1,6 +1,6 @@
 ---
 title: "Diagnosis: Gremlins"
-date: 2005-09-05 05:00:00
+date: 2005-09-05 00:00:00
 keywords: luck, gremlins, hitler, done, take
 original_url: http://www.axisofstevil.com/p/diagnosis-gremlins
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/gotgremlinslarge.jpg"

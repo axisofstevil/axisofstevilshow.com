@@ -1,6 +1,6 @@
 ---
 title: "Ruxpin&#039;s Plight"
-date: 2005-03-29 06:00:00
+date: 2005-03-29 00:00:00
 keywords: fore, ruxpinanda, axis, valley, stevil
 original_url: http://www.axisofstevil.com/p/ruxpins-plight
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/ninjaRuxpin440x300.jpg"

@@ -1,6 +1,6 @@
 ---
 title: "Another Summer Remake"
-date: 2006-07-28 05:00:00
+date: 2006-07-28 00:00:00
 keywords: western, media, show, iran, music
 original_url: http://www.axisofstevil.com/p/another-summer-remake
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/HomelandBound.jpg"

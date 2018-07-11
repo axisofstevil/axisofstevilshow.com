@@ -1,6 +1,6 @@
 ---
 title: "Young Minds Await"
-date: 2007-01-29 06:00:00
+date: 2007-01-29 00:00:00
 keywords: cards, corroboration, game, question, testimony
 original_url: http://www.axisofstevil.com/p/young-minds-await
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/Corroboration.jpg"

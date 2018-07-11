@@ -1,6 +1,6 @@
 ---
 title: "Seeing Is Believing"
-date: 2005-04-18 05:00:00
+date: 2005-04-18 00:00:00
 keywords: axis, stevil, world, good, life
 original_url: http://www.axisofstevil.com/p/seeing-is-believing
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/Seeingpenguinweb.jpg"

@@ -1,6 +1,6 @@
 ---
 title: "Residential Solutions - Stallitude 1.0"
-date: 2005-07-27 05:00:00
+date: 2005-07-27 00:00:00
 keywords: stall, stallitude, install, living, proce
 original_url: http://www.axisofstevil.com/p/residential-solutions
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/bathroomlarge.jpg"

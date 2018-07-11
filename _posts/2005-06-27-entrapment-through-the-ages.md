@@ -1,6 +1,6 @@
 ---
 title: "Entrapment Through The Ages"
-date: 2005-06-27 05:00:00
+date: 2005-06-27 00:00:00
 keywords: reality, world, observaphobia, fear, wogbert
 original_url: http://www.axisofstevil.com/p/entrapment-through-the-ages
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/entrapmentlarge.jpg"

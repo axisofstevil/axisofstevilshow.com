@@ -1,6 +1,6 @@
 ---
 title: "The Science Of Tomorrow, Today!"
-date: 2005-10-07 05:00:00
+date: 2005-10-07 00:00:00
 keywords: phrenology, work, relief, mannequins, science
 original_url: http://www.axisofstevil.com/p/the-science-of-tomorrow-today
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/phrenhead.jpg"

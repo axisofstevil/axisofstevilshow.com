@@ -1,6 +1,6 @@
 ---
 title: "High Voltage Tweeters"
-date: 2005-06-06 05:00:00
+date: 2005-06-06 00:00:00
 keywords: bird, birds, wire, current, stevil
 original_url: http://www.axisofstevil.com/p/high-voltage
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/highbirds.jpg"

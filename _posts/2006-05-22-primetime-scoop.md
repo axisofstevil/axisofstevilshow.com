@@ -1,6 +1,6 @@
 ---
 title: "Primetime Scoop"
-date: 2006-05-22 05:00:00
+date: 2006-05-22 00:00:00
 keywords: time, mice, large, show, mouse
 original_url: http://www.axisofstevil.com/p/primetime-scoop
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/looniest.jpg"

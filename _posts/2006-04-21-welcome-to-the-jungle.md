@@ -1,6 +1,6 @@
 ---
 title: "Welcome To The Jungle"
-date: 2006-04-21 05:00:00
+date: 2006-04-21 00:00:00
 keywords: mouse, morton, mice, turtle, enemy
 original_url: http://www.axisofstevil.com/p/welcome-to-the-jungle
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/mousebuilder.jpg"

@@ -1,6 +1,6 @@
 ---
 title: "Happy (early) Evil Day"
-date: 2006-06-05 05:00:00
+date: 2006-06-05 00:00:00
 keywords: fryer, brothers, darker, excision, sixth
 original_url: http://www.axisofstevil.com/p/happy-early-evil-day
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/excision.jpg"

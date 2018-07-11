@@ -1,6 +1,6 @@
 ---
 title: "Dora The Illegal"
-date: 2006-10-11 05:00:00
+date: 2006-10-11 00:00:00
 keywords: dora, children, year, nickelodeons, thanks
 original_url: http://www.axisofstevil.com/p/dora-the-illegal
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/DoraTheIllegal.jpg"

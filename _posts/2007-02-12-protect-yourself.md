@@ -1,6 +1,6 @@
 ---
 title: "Protect Yourself"
-date: 2007-02-12 06:00:00
+date: 2007-02-12 00:00:00
 keywords: strut, general, human, neil, transporter
 original_url: http://www.axisofstevil.com/p/protect-yourself
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/GeneralTao.jpg"

@@ -1,6 +1,6 @@
 ---
 title: "War Czar Fun"
-date: 2007-04-13 05:00:00
+date: 2007-04-13 00:00:00
 keywords: battleship, flintheart, glomgolds, game, carrier
 original_url: http://www.axisofstevil.com/p/war-czar-fun
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/Flintheartglomgold.jpg"

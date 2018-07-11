@@ -1,6 +1,6 @@
 ---
 title: "Out Of Their Element"
-date: 2006-09-13 05:00:00
+date: 2006-09-13 00:00:00
 keywords: jeffy, strange, celebrities, lebowskis, parents
 original_url: http://www.axisofstevil.com/p/out-of-their-element
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/lillebowski.jpg"

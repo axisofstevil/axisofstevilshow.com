@@ -1,6 +1,6 @@
 ---
 title: "Weiner Pride"
-date: 2007-02-19 06:00:00
+date: 2007-02-19 00:00:00
 keywords: just, restaurant, burger, american, webber
 original_url: http://www.axisofstevil.com/p/weiner-pride
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/GaynW.jpg"

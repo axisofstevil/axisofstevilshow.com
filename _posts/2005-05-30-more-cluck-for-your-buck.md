@@ -1,6 +1,6 @@
 ---
 title: "More Cluck For Your Buck"
-date: 2005-05-30 05:00:00
+date: 2005-05-30 00:00:00
 keywords: kickin, chickin, chicken, name, chickins
 original_url: http://www.axisofstevil.com/p/more-cluck-for-your-buck
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/kickinchicken.jpg"

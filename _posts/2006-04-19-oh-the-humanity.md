@@ -1,6 +1,6 @@
 ---
 title: "Oh The Humanity!"
-date: 2006-04-19 05:00:00
+date: 2006-04-19 00:00:00
 keywords: habit, habits, texas, mobile, steve
 original_url: http://www.axisofstevil.com/p/oh-the-humanity
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/HabitTats.jpg"

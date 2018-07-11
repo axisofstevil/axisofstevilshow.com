@@ -1,6 +1,6 @@
 ---
 title: "You Gotta Do What You Gotta Do"
-date: 2005-08-10 05:00:00
+date: 2005-08-10 00:00:00
 keywords: rabbit, meat, animal, company, discovered
 original_url: http://www.axisofstevil.com/p/you-gotta-do-what-you-gotta-do
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/Rabbitrabbitmeatlarge.jpg"

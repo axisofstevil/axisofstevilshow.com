@@ -1,6 +1,6 @@
 ---
 title: "On Newstands Today!"
-date: 2005-09-26 05:00:00
+date: 2005-09-26 00:00:00
 keywords: game, icarus, hard, right, films
 original_url: http://www.axisofstevil.com/p/hasbeen-october-2005
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/hasbeencoverweb.jpg"

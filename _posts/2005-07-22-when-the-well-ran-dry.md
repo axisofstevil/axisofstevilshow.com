@@ -1,6 +1,6 @@
 ---
 title: "When The Well Ran Dry"
-date: 2005-07-22 05:00:00
+date: 2005-07-22 00:00:00
 keywords: rangers, power, morphing, production, mighty
 original_url: http://www.axisofstevil.com/p/when-the-well-ran-dry
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/zordunemploylarge.jpg"

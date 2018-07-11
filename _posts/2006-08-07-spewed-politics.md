@@ -1,6 +1,6 @@
 ---
 title: "Spew&#039;ed Politics"
-date: 2006-08-07 05:00:00
+date: 2006-08-07 00:00:00
 keywords: fruit, animal, product, spewers, animals
 original_url: http://www.axisofstevil.com/p/spewed-politics
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/Spewers.jpg"

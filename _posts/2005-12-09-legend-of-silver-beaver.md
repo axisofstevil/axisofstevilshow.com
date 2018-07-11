@@ -1,6 +1,6 @@
 ---
 title: "The Tooth Is Loose"
-date: 2005-12-09 06:00:00
+date: 2005-12-09 00:00:00
 keywords: beaver, silver, park, murder, beavers
 original_url: http://www.axisofstevil.com/p/legend-of-silver-beaver
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/silverbeaver.jpg"

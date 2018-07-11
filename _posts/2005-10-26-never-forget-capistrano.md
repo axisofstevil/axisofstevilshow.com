@@ -1,6 +1,6 @@
 ---
 title: "Never Forget Capistrano"
-date: 2005-10-26 05:00:00
+date: 2005-10-26 00:00:00
 keywords: bird, dander, know, forget, birds
 original_url: http://www.axisofstevil.com/p/never-forget-capistrano
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/Never-forget-Capistrano_web.gif"

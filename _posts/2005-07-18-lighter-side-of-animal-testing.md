@@ -1,6 +1,6 @@
 ---
 title: "Lighter Side Of Animal Testing"
-date: 2005-07-18 05:00:00
+date: 2005-07-18 00:00:00
 keywords: animal, animals, product, work, testing
 original_url: http://www.axisofstevil.com/p/lighter-side-of-animal-testing
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/girraffesmelltestlarge.jpg"

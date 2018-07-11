@@ -1,6 +1,6 @@
 ---
 title: "Hang In There Lil Doggy!"
-date: 2005-03-27 06:00:00
+date: 2005-03-27 00:00:00
 keywords: life, pain, frustration, money, axis
 original_url: http://www.axisofstevil.com/p/hang-in-there-lil-doggy
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/Advance-to-pain-web.jpg"

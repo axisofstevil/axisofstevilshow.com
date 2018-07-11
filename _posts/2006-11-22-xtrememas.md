@@ -1,6 +1,6 @@
 ---
 title: "Xtrememas"
-date: 2006-11-22 06:00:00
+date: 2006-11-22 00:00:00
 keywords: teens, xtrememas, porters, burly, holiday
 original_url: http://www.axisofstevil.com/p/xtrememas
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/ProteensChristmas.jpg"

@@ -1,6 +1,6 @@
 ---
 title: "Omg They Killed Kenny"
-date: 2006-07-07 05:00:00
+date: 2006-07-07 00:00:00
 keywords: death, lays, time, corporation, come
 original_url: http://www.axisofstevil.com/p/omg-they-killed-kenny
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/kenlay_lies.jpg"

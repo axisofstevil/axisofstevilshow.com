@@ -1,6 +1,6 @@
 ---
 title: "Triumphant Return Of The American Spirit"
-date: 2005-04-05 05:00:00
+date: 2005-04-05 00:00:00
 keywords: axis, american, stevil, spirit, -
 original_url: http://www.axisofstevil.com/p/triumphant-return-of-the-american-spirit
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/PatriotWallpaperweb.jpg"

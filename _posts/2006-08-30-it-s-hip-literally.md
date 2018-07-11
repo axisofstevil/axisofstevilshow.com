@@ -1,6 +1,6 @@
 ---
 title: "It&#039;s Hip: Literally"
-date: 2006-08-30 05:00:00
+date: 2006-08-30 00:00:00
 keywords: klip, phone, mobile, cellular, network
 original_url: http://www.axisofstevil.com/p/it-s-hip-literally
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/kLip_Buust.jpg"

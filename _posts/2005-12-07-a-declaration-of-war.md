@@ -1,6 +1,6 @@
 ---
 title: "A Declaration Of War"
-date: 2005-12-07 06:00:00
+date: 2005-12-07 00:00:00
 keywords: sock, socks, goblins, people, world
 original_url: http://www.axisofstevil.com/p/a-declaration-of-war
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/terrordryerhead.jpg"

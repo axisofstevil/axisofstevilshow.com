@@ -1,6 +1,6 @@
 ---
 title: "The Axis Of Montage"
-date: 2005-07-01 05:00:00
+date: 2005-07-01 00:00:00
 keywords: stevil, download, axis, wallpaper, aetsmontagewalljpg
 original_url: http://www.axisofstevil.com/p/the-axis-of-montage
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/montagewallweb.jpg"

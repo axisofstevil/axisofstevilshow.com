@@ -1,6 +1,6 @@
 ---
 title: "Beloved Fish Tycoon Dies"
-date: 2005-11-16 06:00:00
+date: 2005-11-16 00:00:00
 keywords: fish, watercrest, mulch, arthur, fried
 original_url: http://www.axisofstevil.com/p/trout-clout
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/troutclout.jpg"

@@ -1,6 +1,6 @@
 ---
 title: "Atm Of Justice"
-date: 2005-08-19 05:00:00
+date: 2005-08-19 00:00:00
 keywords: justice, system, guilty, fozzie, enter
 original_url: http://www.axisofstevil.com/p/atm-of-justice
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/atmofjusticefull.jpg"

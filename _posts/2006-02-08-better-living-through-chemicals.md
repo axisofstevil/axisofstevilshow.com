@@ -1,6 +1,6 @@
 ---
 title: "Better Living Through Chemicals"
-date: 2006-02-08 06:00:00
+date: 2006-02-08 00:00:00
 keywords: scaroel, plant, young, raleighs, stevans
 original_url: http://www.axisofstevil.com/p/better-living-through-chemicals
 image: "https://d3e878vmunx8cm.cloudfront.net/assets/gluttoxipawn.jpg"
