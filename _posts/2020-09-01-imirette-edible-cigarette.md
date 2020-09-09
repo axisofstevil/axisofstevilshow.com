@@ -1,10 +1,10 @@
 ---
-title: "Injustice No More!"
-date: 2006-05-12 00:00:00
-keywords: cigarettes, smoke, break, imirette, smoking
-original_url: http://www.axisofstevil.com/p/injustice-no-more
-image: "https://d3e878vmunx8cm.cloudfront.net/assets/takebackyourbreak.jpg"
-slug: injustice-no-more
+title: "Imirette© Edible Imitation Cigarettes"
+date: 2020-09-01 00:00:00
+keywords: smoke break, health, workplace
+original_url: http://www.axisofstevil.com/p/imirette-edible-cigarette
+image: "https://d3e878vmunx8cm.cloudfront.net"
+slug: imirette-edible-cigarette
 layout: post
 ---
 
