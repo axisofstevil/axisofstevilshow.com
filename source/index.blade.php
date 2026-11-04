@@ -54,7 +54,7 @@
             {{-- The results so far; before the first call, what is coming: its day, the calls on the calendar, the quarters to report. --}}
             @if ($opening)
                 <dl class="figures">
-                    <div><dt>The first call</dt><dd><a href="#notice-title" aria-label="The first call, {{ $first['date'] }}: the notice">{{ $first['day'] }}</a></dd></div>
+                    <div><dt>The first call</dt><dd>{{ $first['day'] }}</dd></div>
                     <div><dt>On the calendar</dt><dd>{{ count($page->upcoming) }}</dd></div>
                     <div><dt>Quarters to report</dt><dd>10</dd></div>
                 </dl>
