@@ -3,8 +3,8 @@
 # Needs, in the repository's Actions settings:
 #   variables  CHANNEL_URL                 the site's channel (its API address); its linked channels say the rest
 #              SITE_URL                    optional: the address the site is served at, when not its own (a CloudFront
-#                                          test address before launch); the build is then a preview, never indexed.
-#                                          Remove it at launch.
+#                                          test address, for a rehearsal); the build is then a preview, never indexed.
+#                                          Unset, it is www.axisofstevilshow.com.
 #              S3_BUCKET                   the bucket the site is served from
 #              S3_REGION                   its region
 #              CLOUDFRONT_DISTRIBUTION_ID  the distribution in front of it
@@ -16,15 +16,12 @@
 #
 # It also builds every morning at 6:05 Eastern, five minutes after that day's release (6:00), so a released call appears
 # without a push. Cron runs in UTC, so both 10:05 (EDT) and 11:05 (EST) are scheduled and the gate lets only the one that
-# is 6:05 in New York through. GitHub schedules from the default branch only, so this starts once the workflow is on main.
-#
-# Before launch it also deploys a push to jigsaw (the site's branch while the old site still serves from main): the
-# pre-launch rehearsal at the CloudFront address. Remove jigsaw below, and SITE_URL, at launch.
+# is 6:05 in New York through. GitHub schedules from the default branch (main) only.
 name: Deploy
 
 on:
   push:
-    branches: [main, jigsaw]
+    branches: [main]
   schedule:
     - cron: '5 10 * * *'
     - cron: '5 11 * * *'
