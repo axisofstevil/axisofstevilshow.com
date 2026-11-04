@@ -14,9 +14,9 @@
 # CloudFront. Every object is uploaded public-read (the deploy user needs s3:PutObjectAcl). The build's forwards become
 # S3 website redirects (a real 301) after the sync.
 #
-# It also builds every morning at 7:00 Eastern, after that day's release, so a released call appears without a push.
-# Cron runs in UTC, so both 11:00 (EDT) and 12:00 (EST) are scheduled and the gate lets only the one that is 7:00 in New
-# York through. GitHub schedules from the default branch only, so this starts once the workflow is on main.
+# It also builds every morning at 6:05 Eastern, five minutes after that day's release (6:00), so a released call appears
+# without a push. Cron runs in UTC, so both 10:05 (EDT) and 11:05 (EST) are scheduled and the gate lets only the one that
+# is 6:05 in New York through. GitHub schedules from the default branch only, so this starts once the workflow is on main.
 #
 # Before launch it also deploys a push to jigsaw (the site's branch while the old site still serves from main): the
 # pre-launch rehearsal at the CloudFront address. Remove jigsaw below, and SITE_URL, at launch.
@@ -26,8 +26,8 @@ on:
   push:
     branches: [main, jigsaw]
   schedule:
-    - cron: '0 11 * * *'
-    - cron: '0 12 * * *'
+    - cron: '5 10 * * *'
+    - cron: '5 11 * * *'
   workflow_dispatch:
     inputs:
       dry_run:
@@ -50,10 +50,10 @@ jobs:
           FIRED: ${{ github.event.schedule }}
         run: |
           zone=$(TZ=America/New_York date +%Z)
-          if [ -z "$FIRED" ] || { [ "$FIRED" = '0 11 * * *' ] && [ "$zone" = EDT ]; } || { [ "$FIRED" = '0 12 * * *' ] && [ "$zone" = EST ]; }; then
+          if [ -z "$FIRED" ] || { [ "$FIRED" = '5 10 * * *' ] && [ "$zone" = EDT ]; } || { [ "$FIRED" = '5 11 * * *' ] && [ "$zone" = EST ]; }; then
             echo go=true >> "$GITHUB_OUTPUT"
           else
-            echo "go=false ($FIRED is not 7:00 in New York, $zone)"; echo go=false >> "$GITHUB_OUTPUT"
+            echo "go=false ($FIRED is not 6:05 in New York, $zone)"; echo go=false >> "$GITHUB_OUTPUT"
           fi
 
   deploy:

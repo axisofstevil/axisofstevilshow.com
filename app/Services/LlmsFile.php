@@ -59,7 +59,7 @@ class LlmsFile
         $lines[] = '';
         $lines[] = 'Generated: '.$built->toIso8601String().' ('.$built->format('l, F j, Y \a\t H:i').' UTC).';
         $lines[] = '';
-        $lines[] = 'This file was written when the site was last built, from the show\'s source of record. The site is rebuilt every morning at 7:00 Eastern, after that day\'s release, and each build replaces this file.';
+        $lines[] = 'This file was written when the site was last built, from the show\'s source of record. The site is rebuilt every morning at 6:05 Eastern, just after that day\'s release, and each build replaces this file.';
 
         file_put_contents($jigsaw->getDestinationPath().'/llms.txt', implode("\n", $lines)."\n");
     }

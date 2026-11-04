@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Jigsaw on PHP 8.4, a static site, as axisofstevil.com is: built from the channel's public API, deployed to S3 behind CloudFront by GitHub Actions on a push and every morning at 7:00 Eastern. Developed on the `jigsaw` branch; the Jekyll site keeps serving from `main` on GitHub Pages (tag `circa-2026` marks it) until the new site replaces it.
+Jigsaw on PHP 8.4, a static site, as axisofstevil.com is: built from the channel's public API, deployed to S3 behind CloudFront by GitHub Actions on a push and every morning at 6:05 Eastern. Developed on the `jigsaw` branch; the Jekyll site keeps serving from `main` on GitHub Pages (tag `circa-2026` marks it) until the new site replaces it.
 
 ## Users
 
