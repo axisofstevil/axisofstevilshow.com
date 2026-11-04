@@ -76,6 +76,8 @@ return [
     'episodes' => [],
     'quarters' => [],
     'latest' => null,
+    'linked' => [],
+    'site_description' => null,
     'upcoming' => [],
     'chart' => [],
     'figures' => [],

@@ -40,7 +40,8 @@ class StructuredData
                 'url' => $base.'/',
                 'name' => $name,
                 'alternateName' => 'Axis of Stevil Show',
-                'description' => (string) $show->description,
+                // The banner's own description (its channel's), the featured series' only until it has one.
+                'description' => (string) ($page->site_description ?: $show->description),
                 'inLanguage' => 'en-US',
                 'publisher' => ['@id' => $organisation['@id']],
             ],

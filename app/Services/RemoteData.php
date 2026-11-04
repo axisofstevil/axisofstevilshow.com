@@ -56,6 +56,15 @@ class RemoteData
             $siteUrl = $mainUrl;
             $channelUrl = rtrim((string) $featured['api_url'], '/');
         }
+        // The site's series as its channel lists them (llms.txt names each), and the site's own description (the
+        // website's, in its structured data); none when the site builds from a series alone.
+        $jigsaw->setConfig('linked', array_map(fn (array $link) => [
+            'name' => (string) $link['name'],
+            'site_url' => (string) ($link['site_url'] ?? ''),
+            'featured' => ! empty($link['featured']),
+        ], $siteUrl !== null ? $main['linked'] : []));
+        $siteDescription = $main['description'] ?? null;
+        $jigsaw->setConfig('site_description', $siteUrl !== null && is_string($siteDescription) && trim($siteDescription) !== '' ? trim($siteDescription) : null);
         $zone = (string) $jigsaw->getConfig('timezone');
         $upcoming = $this->json($channelUrl.'/upcoming')['data'] ?? [];
 

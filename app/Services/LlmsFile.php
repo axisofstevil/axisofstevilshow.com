@@ -7,9 +7,10 @@ use TightenCo\Jigsaw\Jigsaw;
 
 /**
  * The guide for language models (/llms.txt, per llmstxt.org), as the archive's: short enough to read whole. It opens
- * in the owner's own words (the channel's page at llms.txt; the show's name and description when there is none),
- * then lists every released call with its place in the run, the show's own pages, the feed and the sitemap, and ends
- * with when it was written.
+ * in the owner's own words (the site channel's page at llms.txt; the show's name and description when there is none),
+ * then names the show's series (the site channel's linked channels, the featured one described), lists the featured
+ * series' released calls with its place in the run and its own pages, points to the archive and the archive's own guide,
+ * and ends with the sitemap, the feed and when it was written.
  */
 class LlmsFile
 {
@@ -20,6 +21,8 @@ class LlmsFile
         $archive = rtrim((string) $jigsaw->getConfig('archiveUrl'), '/');
         $episodes = $this->rows($jigsaw->getConfig('episodes'));
         $show = $this->rows($jigsaw->getConfig('show'));
+        $series = (string) $jigsaw->getConfig('series')['name'];
+        $feed = $base.'/earnings-calls/feed.xml';
         $link = fn (string $name, string $address, string $note = '') => "- [{$name}]({$address})".($note === '' ? '' : ': '.$this->line($note));
         $length = fn (float $s) => sprintf('%d:%02d', intdiv((int) $s, 60), (int) $s % 60);
 
@@ -28,8 +31,21 @@ class LlmsFile
 
         $lines = $own !== '' ? [$own, ''] : ['# '.$title, '', '> '.$this->line((string) ($show['description'] ?? '')), ''];
 
-        // The calls, in the run's order: each its quarter and part, release date and length, and its notes' opening.
-        $lines[] = '## '.(string) $jigsaw->getConfig('series')['name'];
+        // The show's series, as its site channel links them: the featured one (the series this site builds) with its
+        // description, schedule and feed; any other by its name and address. A build from a series alone names only it.
+        $lines[] = '## Series';
+        $lines[] = '';
+        $linked = $this->rows($jigsaw->getConfig('linked')) ?: [['name' => $series, 'site_url' => '', 'featured' => true]];
+        foreach ($linked as $other) {
+            $lines[] = $other['featured']
+                ? $link($series, $base.'/earnings-calls/', rtrim($this->line((string) ($show['description'] ?? '')), '.').'. Mondays at 6:00 AM Eastern; its feed: '.$feed)
+                : $link((string) $other['name'], (string) $other['site_url']);
+        }
+
+        // The calls, in the run's order: each its quarter and part, release date and length, and its notes' opening; then
+        // the series' own pages.
+        $lines[] = '';
+        $lines[] = '## '.$series;
         $lines[] = '';
         $first = $this->rows($jigsaw->getConfig('upcoming'))[0] ?? null;
         $lines[] = $link('All the calls', $base.'/earnings-calls/', count($episodes).' released so far, by quarter (Q1 \'05 to Q2 \'07), a few calls to each quarter; one a week, Mondays at 6:00 AM Eastern'.($episodes === [] && $first ? '; the first goes out on '.$first['date'].', at '.$first['time'] : ''));
@@ -39,18 +55,23 @@ class LlmsFile
             $lines[] = $link((string) $episode['title'], $base.'/earnings-calls/episodes/'.$episode['slug'].'/', "{$episode['label']}, released {$episode['released_on']}, {$length((float) $episode['duration'])}. ".$this->sentence($notes));
         }
 
-        $lines[] = '';
-        $lines[] = '## The show';
-        $lines[] = '';
         $lines[] = $link('About the calls', $base.'/earnings-calls/about/', 'the format, the agenda of a call, and the works it reads');
-        $lines[] = $link('Subscribe', $base.'/earnings-calls/subscribe/', 'how to follow the show in a podcast app');
-        $lines[] = $link('The Axis of Stevil', $archive.'/', 'the archive of axisofstevil.com, 2005 to 2007, whose works the calls read; each call links to every work it covers');
+        $lines[] = $link('Subscribe', $base.'/earnings-calls/subscribe/', 'how to follow the series in a podcast app');
+
+        // The archive the show reads, and the archive's own guide, for any question about a work rather than a call.
+        $lines[] = '';
+        $lines[] = '## The archive';
+        $lines[] = '';
+        $lines[] = $link('The Axis of Stevil', $archive.'/', 'the archive itself, every work from 2005 to 2007 on its own page; the source of everything the show reads');
+        $lines[] = $link('The archive\'s guide', $archive.'/llms.txt', 'its story, its notable works and how it is laid out; read it for any question about a work rather than a call');
+        $lines[] = $link('All works', $archive.'/works/', 'every work, by division');
+        $lines[] = $link('Issues', $archive.'/issues/', 'the weekly front pages as they ran, March 2005 to May 2007');
 
         $lines[] = '';
         $lines[] = '## Optional';
         $lines[] = '';
-        $lines[] = $link('Podcast feed', $base.'/earnings-calls/feed.xml', 'every released call, as RSS with chapters and a WebVTT transcript for each');
         $lines[] = $link('Sitemap', $base.'/sitemap.xml', 'every page of the site');
+        $lines[] = $link($series.' feed', $feed, 'every released call, as RSS with chapters and a WebVTT transcript for each');
 
         // When this was written: the site is rebuilt every morning from its source of record, so the file is as current as the build.
         $built = CarbonImmutable::now('UTC');
