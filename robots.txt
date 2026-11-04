@@ -1,5 +1,0 @@
----
----
-User-agent: *
-Disallow:
-Sitemap: https://www.axisofstevilshow.com/sitemap.xml

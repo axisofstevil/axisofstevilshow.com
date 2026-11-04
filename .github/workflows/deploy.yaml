@@ -1,0 +1,136 @@
+# Builds the site and puts it in the S3 bucket CloudFront serves, as axisofstevil.com's does.
+#
+# Needs, in the repository's Actions settings:
+#   variables  CHANNEL_URL                 the site's channel (its API address); its linked channels say the rest
+#              SITE_URL                    optional: the address the site is served at, when not its own (a CloudFront
+#                                          test address before launch); the build is then a preview, never indexed.
+#                                          Remove it at launch.
+#              S3_BUCKET                   the bucket the site is served from
+#              S3_REGION                   its region
+#              CLOUDFRONT_DISTRIBUTION_ID  the distribution in front of it
+#   secrets    AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY   a user allowed to write the bucket and invalidate the distribution
+#
+# The bucket serves as a website (index.html for a folder, and S3's own redirect from /about to /about/), behind
+# CloudFront; its policy grants public read of every object, so nothing here sets an ACL. The build's forwards become
+# S3 website redirects (a real 301) after the sync.
+#
+# It also builds every morning at 7:00 Eastern, after that day's release, so a released call appears without a push.
+# Cron runs in UTC, so both 11:00 (EDT) and 12:00 (EST) are scheduled and the gate lets only the one that is 7:00 in New
+# York through. GitHub schedules from the default branch only, so this starts once the workflow is on main.
+#
+# Before launch it also deploys a push to jigsaw (the site's branch while the old site still serves from main): the
+# pre-launch rehearsal at the CloudFront address. Remove jigsaw below, and SITE_URL, at launch.
+name: Deploy
+
+on:
+  push:
+    branches: [main, jigsaw]
+  schedule:
+    - cron: '0 11 * * *'
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Build only; touch neither the bucket nor CloudFront
+        type: boolean
+        default: false
+      all_redirects:
+        description: Set every forward again, not only the new and changed ones
+        type: boolean
+        default: false
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  gate:
+    runs-on: ubuntu-24.04
+    outputs:
+      go: ${{ steps.clock.outputs.go }}
+    steps:
+      - id: clock
+        env:
+          FIRED: ${{ github.event.schedule }}
+        run: |
+          zone=$(TZ=America/New_York date +%Z)
+          if [ -z "$FIRED" ] || { [ "$FIRED" = '0 11 * * *' ] && [ "$zone" = EDT ]; } || { [ "$FIRED" = '0 12 * * *' ] && [ "$zone" = EST ]; }; then
+            echo go=true >> "$GITHUB_OUTPUT"
+          else
+            echo "go=false ($FIRED is not 7:00 in New York, $zone)"; echo go=false >> "$GITHUB_OUTPUT"
+          fi
+
+  deploy:
+    needs: gate
+    if: needs.gate.outputs.go == 'true'
+    runs-on: ubuntu-24.04
+    environment: Production
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: mbstring, intl, iconv
+          coverage: none
+
+      - name: Install dependencies
+        run: composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
+
+      - name: Build the site
+        env:
+          CHANNEL_URL: ${{ vars.CHANNEL_URL }}
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: vendor/bin/jigsaw build production
+
+      - name: Record the build
+        run: date -u +%Y-%m-%dT%H:%M:%SZ > build_production/build.txt
+
+      - name: Configure AWS
+        if: ${{ !inputs.dry_run }}
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ vars.S3_REGION }}
+
+      - name: Note the forwards as deployed
+        if: ${{ !inputs.dry_run }}
+        # The rules the last deploy set, so only new or changed ones are set this time.
+        run: |
+          aws s3 cp "s3://${{ vars.S3_BUCKET }}/_redirects" deployed-redirects --only-show-errors 2>/dev/null || true
+          touch deployed-redirects
+
+      - name: Sync with S3
+        if: ${{ !inputs.dry_run }}
+        # Three passes, for the cache lifetimes: pages, the feed and the site's files always checked (CloudFront is
+        # invalidated each deploy); the stylesheet, the script and Turbo are named for their contents or version, kept
+        # for a year; the rest of the assets (the fonts, the logo), a month.
+        env:
+          BUCKET: ${{ vars.S3_BUCKET }}
+        run: |
+          aws s3 sync build_production/ "s3://$BUCKET/" --delete --only-show-errors --exclude "assets/*" --cache-control "public, max-age=0, must-revalidate"
+          aws s3 sync build_production/ "s3://$BUCKET/" --delete --only-show-errors --exclude "*" --include "assets/site.*.css" --include "assets/site.*.js" --include "assets/turbo.*.js" --cache-control "public, max-age=31536000, immutable"
+          aws s3 sync build_production/ "s3://$BUCKET/" --delete --only-show-errors --exclude "*" --include "assets/*" --exclude "assets/site.*.css" --exclude "assets/site.*.js" --exclude "assets/turbo.*.js" --cache-control "public, max-age=2592000"
+
+      - name: Set the forwards as website redirects
+        if: ${{ !inputs.dry_run }}
+        # Each new or changed rule in _redirects (from to 301) becomes an empty object at the old address that S3
+        # answers with a 301. An old address with its own slash is its index.html. Sixteen at once.
+        env:
+          BUCKET: ${{ vars.S3_BUCKET }}
+        run: |
+          : > empty
+          if [ "${{ inputs.all_redirects }}" = "true" ]; then cp build_production/_redirects changed-redirects; else comm -13 <(sort deployed-redirects) <(sort build_production/_redirects) > changed-redirects; fi
+          echo "forwards: $(wc -l < build_production/_redirects), to set: $(wc -l < changed-redirects)"
+          awk 'NF >= 2 {
+            key = substr($1, 2);
+            if (key ~ /\/$/) key = key "index.html";
+            else if (key !~ /\./) key = key "/index.html";
+            print key "\t" $2
+          }' changed-redirects | xargs -r -P 16 -L 1 sh -c 'aws s3api put-object --bucket "$BUCKET" --key "$0" --website-redirect-location "$1" --content-type text/html --body empty > /dev/null'
+
+      - name: Invalidate CloudFront
+        if: ${{ !inputs.dry_run }}
+        run: aws cloudfront create-invalidation --distribution-id "${{ vars.CLOUDFRONT_DISTRIBUTION_ID }}" --paths "/*" > /dev/null
