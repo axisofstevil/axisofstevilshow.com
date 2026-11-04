@@ -31,7 +31,8 @@ class LlmsFile
         // The calls, in the run's order: each its quarter and part, release date and length, and its notes' opening.
         $lines[] = '## '.(string) $jigsaw->getConfig('series')['name'];
         $lines[] = '';
-        $lines[] = $link('All the calls', $base.'/earnings-calls/', count($episodes).' released so far, by quarter (Q1 \'05 to Q2 \'07), a few calls to each quarter; one a week, Mondays at 6:00 AM Eastern');
+        $first = $this->rows($jigsaw->getConfig('upcoming'))[0] ?? null;
+        $lines[] = $link('All the calls', $base.'/earnings-calls/', count($episodes).' released so far, by quarter (Q1 \'05 to Q2 \'07), a few calls to each quarter; one a week, Mondays at 6:00 AM Eastern'.($episodes === [] && $first ? '; the first goes out on '.$first['date'].', at '.$first['time'] : ''));
 
         foreach ($episodes as $episode) {
             $notes = (string) preg_replace('/^Q\d \'\d\d, Part \d+\.\s*/', '', (string) $episode['notes_text']);

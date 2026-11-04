@@ -28,7 +28,12 @@
             <dl class="series-facts">
                 <div><dt>The run</dt><dd>Q1 '05 to Q2 '07</dd></div>
                 <div><dt>Schedule</dt><dd>Mondays, 6:00 AM ET</dd></div>
-                <div><dt>Calls released</dt><dd>{{ $page->figures['calls'] ?? 0 }}</dd></div>
+                {{-- What is out so far; before the first call, when it is. --}}
+                @if (! $page->latest && count($page->upcoming) > 0)
+                    <div><dt>The first call</dt><dd>{{ $page->upcoming[0]['day'] }}</dd></div>
+                @else
+                    <div><dt>Calls released</dt><dd>{{ $page->figures['calls'] ?? 0 }}</dd></div>
+                @endif
             </dl>
             @if (count($page->quarters) > 0 || count($page->upcoming) > 0)
                 @include('_partials.run', ['level' => 2])

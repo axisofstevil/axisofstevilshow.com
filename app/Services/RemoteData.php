@@ -165,12 +165,21 @@ class RemoteData
                 'content' => MarkdownExtra::defaultTransform((string) ($page['body'] ?? '')),
             ]);
         }
-        // The next call, teased by title and time (none between a release and the next scheduling).
-        $jigsaw->setConfig('upcoming', array_map(fn (array $u) => [
-            ...$u,
-            'label' => "{$u['season_name']}, Part {$u['part']}",
-            'when' => CarbonImmutable::parse($u['releases_at'])->setTimezone($zone)->format('l, F j, g:i A T'),
-        ], $upcoming));
+        // The next call, teased by title and time (none between a release and the next scheduling); its time in the forms
+        // the pages use: in full, as the notice's date and hour, short (a row of the run), and the day alone (a figure).
+        $jigsaw->setConfig('upcoming', array_map(function (array $u) use ($zone) {
+            $at = CarbonImmutable::parse($u['releases_at'])->setTimezone($zone);
+
+            return [
+                ...$u,
+                'label' => "{$u['season_name']}, Part {$u['part']}",
+                'when' => $at->format('l, F j, g:i A T'),
+                'date' => $at->format('l, F j, Y'),
+                'time' => $at->format('g:i A').' Eastern',
+                'short' => $at->format('D, M j · g:i A'),
+                'day' => $at->format('M j'),
+            ];
+        }, $upcoming));
     }
 
     /**

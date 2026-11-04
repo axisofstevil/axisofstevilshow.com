@@ -254,6 +254,17 @@ button { font: inherit; color: inherit; }
 .next-calls li { display: grid; gap: 2px; padding: 10px 0; border-bottom: 1px solid var(--major); font: 500 1.125rem/1.3 var(--display); }
 .next-calls span { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
 .next-note { margin: 0; color: var(--muted); }
+/* The first call's notice: the date set large, the terms, the subscribe button; the agenda beside it. */
+.home-calls > .notice { grid-column: 1 / -1; }
+.notice { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); column-gap: calc(var(--pad) * 2); align-content: start; }
+.notice-main { display: grid; justify-items: start; align-content: start; gap: var(--pad); }
+.notice-title { margin: 0; }
+.notice-when { margin: 0; display: grid; gap: 4px; font: 700 clamp(1.75rem, calc(var(--col) * 0.36), 3rem)/1.05 var(--display); text-transform: uppercase; letter-spacing: 0.01em; text-wrap: balance; }
+.notice-when span + span { color: var(--red-ink); }
+.notice-lede { margin: 0; max-width: 46ch; font-size: 1.125rem; line-height: 1.5; }
+.notice-sub { margin: 0 0 10px; font: 600 0.8125rem/1.3 var(--display); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.notice-agenda { align-self: end; }
+@media (max-width: 1100px) { .notice { grid-template-columns: minmax(0, 1fr); row-gap: calc(var(--pad) * 1.5); } }
 .play-small { width: 36px; height: 36px; min-width: 36px; min-height: 36px; max-width: 36px; max-height: 36px; background: var(--ink); }
 .play-small:hover { background: var(--slate); }
 .play-small.is-current { background: var(--red); }
@@ -443,7 +454,9 @@ button { font: inherit; color: inherit; }
 .run li a { text-decoration: none; }
 .run-part, .run-meta { font-size: 0.8125rem; color: var(--muted); letter-spacing: 0.04em; }
 .run li.is-coming { color: var(--muted); }
-.run li.is-coming .run-meta { font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.75rem; text-align: right; }
+.run li.is-coming { grid-template-columns: 36px 4.25rem minmax(0, 1fr); row-gap: 2px; }
+.run li.is-coming .play-spacer, .run li.is-coming .run-part { grid-row: span 2; }
+.run li.is-coming .run-meta { grid-column: 3; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.6875rem; }
 .sheet-row { display: grid; grid-template-columns: calc(var(--col) * 9) minmax(0, 1fr); }
 .sheet-row > .ad:only-child { grid-column: 1 / -1; }
 

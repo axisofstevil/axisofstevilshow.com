@@ -4,7 +4,7 @@
     $groups = collect($page->quarters)->map(fn ($q) => ['season' => $q['season'], 'name' => $q['name'], 'year' => $q['year'], 'calls' => collect($q['episodes'])->map(fn ($e) => ['part' => $e['part'], 'slug' => $e['slug'], 'title' => $e['title'], 'href' => '/earnings-calls/episodes/'.$e['slug'].'/', 'meta' => $length($e['duration'])])->all()])->keyBy('season');
     foreach ($page->upcoming as $u) {
         $group = $groups[$u['season']] ?? ['season' => $u['season'], 'name' => $u['season_name'], 'year' => null, 'calls' => []];
-        $group['calls'][] = ['part' => $u['part'], 'slug' => null, 'title' => $u['title'], 'href' => null, 'meta' => $u['when']];
+        $group['calls'][] = ['part' => $u['part'], 'slug' => null, 'title' => $u['title'], 'href' => null, 'meta' => $u['short']];
         $groups[$u['season']] = $group;
     }
 @endphp
