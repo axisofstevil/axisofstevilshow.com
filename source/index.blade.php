@@ -10,7 +10,7 @@
         $latest = $page->latest;
         // Before the first release the page is the first call's notice: its date and agenda, in place of the run's results.
         $first = $page->upcoming[0] ?? null;
-        $opening = ! $latest && $first;
+        $announcing = ! $latest && $first;
         $together = $first ? count(array_filter($page->upcoming->toArray(), fn ($u) => $u['releases_at'] === $first['releases_at'])) : 0;
         $words = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
         $plate = 1;
@@ -52,7 +52,7 @@
                 </div>
             @endif
             {{-- The results so far; before the first call, what is coming: its day, the calls on the calendar, the quarters to report. --}}
-            @if ($opening)
+            @if ($announcing)
                 <dl class="figures">
                     <div><dt>The first call</dt><dd>{{ $first['day'] }}</dd></div>
                     <div><dt>On the calendar</dt><dd>{{ count($page->upcoming) }}</dd></div>
@@ -93,7 +93,7 @@
                 <p class="caption">Plate {{ $plate++ }} · The current call</p>
             </section>
         @endif
-        @if ($opening)
+        @if ($announcing)
             {{-- The notice of the first call, as a company gives one: when, what is on the agenda, and how to dial in. --}}
             <section class="plate notice" aria-labelledby="notice-title">
                 <div class="notice-main">
@@ -133,7 +133,7 @@
 
     <div class="sheet-row">
         {{-- The run, once a call is out (before then the notice's agenda is the whole of it). --}}
-        @unless ($opening)
+        @unless ($announcing)
             <section class="plate calls" aria-labelledby="calls-title" data-snap>
                 <h2 class="section-title" id="calls-title"><a href="/earnings-calls/">The calls</a></h2>
                 @include('_partials.run')
