@@ -68,6 +68,10 @@ class Feed
     <description>{$x($show['description'])}</description>
     <itunes:summary>{$x($show['description'])}</itunes:summary>
     <itunes:author>{$x($show['author'])}</itunes:author>
+    <itunes:owner>
+      <itunes:name>{$x($show['author'])}</itunes:name>
+      <itunes:email>{$x($show['owner_email'])}</itunes:email>
+    </itunes:owner>
     <itunes:image href="{$x($cover)}"/>
     <image><url>{$x($cover)}</url><title>{$x($title)}</title><link>{$x($home)}</link></image>
     <itunes:category text="{$x($show['category'])}"/>

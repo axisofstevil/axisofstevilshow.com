@@ -38,6 +38,8 @@ return [
         // place both read from. It carries the show-level AI disclosure Apple requires (Content Requirements, 1.11).
         'description' => 'The Axis of Stevil is reporting its results twenty years late. In a run of quarterly earnings calls, its Chief Financial Officer, Juan Conroy, reads the archive of axisofstevil.com from 2005 to 2007, one quarter to a season and a few calls to a quarter. Stevil, the CEO, is on every call. He has not spoken. The CFO\'s voice is synthetic, and his remarks were written with assistance from AI; the works he reads were written by people. A parody, read from an archive of satire.',
         'author' => 'The Axis of Stevil',
+        // The show's owner, for the directories (Apple Podcasts sends its verification code here). Public: it is in the feed.
+        'owner_email' => 'shows@axisofstevil.com',
         'category' => 'Comedy',
         'language' => 'en-us',
         // The show's pages in the directories, by app name, once it is listed: a listing replaces the app's own
