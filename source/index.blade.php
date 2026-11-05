@@ -99,7 +99,7 @@
                 <div class="notice-main">
                     <h2 class="section-title notice-title" id="notice-title">Notice of the first call</h2>
                     <p class="notice-when"><span>{{ $first['date'] }}</span><span>{{ $first['time'] }}</span></p>
-                    <p class="notice-lede">The Axis of Stevil will host its first earnings call.@if ($together > 1) The first {{ $words[$together] ?? $together }} calls go out together; after that, a new call every Monday.@endif Participants may dial in from any podcast app.</p>
+                    <p class="notice-lede">The Axis of Stevil will host its first earnings call.@if ($together > 1) The first {{ $words[$together] ?? $together }} calls go out together; after that, a new call every Monday.@endif Participants may dial in from this website or any podcast app.</p>
                     <a class="ad-cta" href="/earnings-calls/subscribe/">Subscribe before the call @include('_partials.arrow')</a>
                 </div>
                 <div class="notice-agenda">
