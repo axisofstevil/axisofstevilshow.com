@@ -20,7 +20,11 @@ class Feed
     {
         $base = rtrim((string) $jigsaw->getConfig('baseUrl'), '/');
         $show = $jigsaw->getConfig('show');
-        $episodes = collect($jigsaw->getConfig('episodes') ?? [])->sortByDesc('released_at')->values();
+        // Calls released together (the launch's three, at the same 6:00) would share a date, and apps would order them
+        // as they please: each takes one second more than the one before it in the run, so every app sorts them in order.
+        $episodes = collect($jigsaw->getConfig('episodes') ?? [])->sortBy('number')->groupBy('released_at')
+            ->flatMap(fn ($same) => $same->values()->map(fn ($e, $i) => [...$e, 'released_rfc' => (new \DateTimeImmutable($e['released_at']))->modify("+{$i} seconds")->format(DATE_RFC2822)]))
+            ->sortByDesc(fn ($e) => [$e['released_at'], $e['number']])->values();
         $x = fn (?string $text): string => htmlspecialchars((string) $text, ENT_XML1 | ENT_QUOTES);
         $title = (string) $jigsaw->getConfig('series')['title'];
         $home = $base.(string) $jigsaw->getConfig('series')['path'];
