@@ -9,7 +9,8 @@ use TightenCo\Jigsaw\PageVariable;
  * page names the website and the podcast, "The Axis of Stevil Show", as their own entities, distinct from the archive
  * (The Axis of Stevil, at axisofstevil.com), which publishes them; the archive's organisation is referred to by the
  * archive's own @id, so the two sites describe one company. A call's page is a PodcastEpisode in its season and series;
- * the calls are an ItemList; About is an AboutPage. Pages marked noindex carry none.
+ * it names the archive's works it covers by the archive's own ids, and its chapters as clips, each at its moment (the
+ * player cues a call at ?t= seconds); the calls are an ItemList; About is an AboutPage. Pages marked noindex carry none.
  */
 class StructuredData
 {
@@ -98,6 +99,21 @@ class StructuredData
                 'image' => (string) ($page->exhibits[0]['image'] ?? $page->cover),
                 'inLanguage' => 'en-US',
                 'partOfSeries' => $series,
+                // The works it covers, by the ids their pages on the archive give them: read, shown or housekept.
+                'about' => array_map(fn (array $w) => ['@type' => 'CreativeWork', '@id' => $w['url'].'#work', 'name' => $w['title'], 'url' => $w['url']], self::rows($page->works)) ?: null,
+                // Its chapters, each a clip from its start to the next one's, at an address that cues the call there.
+                'hasPart' => array_map(function (array $c, int $i) use ($page, $url) {
+                    $chapters = self::rows($page->chapters);
+                    $start = (int) ceil((float) $c['start']);
+
+                    return [
+                        '@type' => 'Clip',
+                        'name' => (string) $c['title'],
+                        'startOffset' => $start,
+                        'endOffset' => (int) ceil((float) ($chapters[$i + 1]['start'] ?? $page->duration)),
+                        'url' => $url.'?t='.$start,
+                    ];
+                }, self::rows($page->chapters), array_keys(self::rows($page->chapters))) ?: null,
                 'partOfSeason' => ['@type' => 'PodcastSeason', 'name' => (string) $page->season_name, 'seasonNumber' => (int) $page->season, 'partOfSeries' => $series],
                 'associatedMedia' => [
                     '@type' => 'AudioObject',
@@ -122,7 +138,7 @@ class StructuredData
             $graph[] = ['@type' => 'WebPage', ...$webPage];
         }
 
-        return ['@context' => 'https://schema.org', '@graph' => $graph];
+        return ['@context' => 'https://schema.org', '@graph' => array_map(fn (array $node) => array_filter($node, fn ($v) => $v !== null), $graph)];
     }
 
     /**
