@@ -102,6 +102,21 @@
         document.body.classList.toggle('has-dock', !dock.hidden);
         markResumes();
         if (!call) return;
+        // A link that cues the call (?t= seconds, as the archive's works link to the moment they come up): the dock
+        // loads this call there, paused, so one press plays from it (browsers start no sound on arrival). A call
+        // already playing jumps there and plays on. The address then drops the cue, so a reload doesn't cue it again.
+        const cue = new URLSearchParams(location.search).get('t');
+        if (cue !== null && /^\d+(\.\d+)?$/.test(cue)) {
+            const at = Math.min(Number(cue), (bySlug[call.dataset.call]?.duration || Infinity) - 1);
+            if (current && current.slug === call.dataset.call) audio.currentTime = at;
+            else {
+                audio.preload = 'metadata';
+                load(call.dataset.call, at);
+                dock.querySelector('[data-at]').textContent = clock(at);
+                audio.addEventListener('loadedmetadata', paint, { once: true });
+            }
+            history.replaceState(history.state, '', location.pathname + location.hash);
+        }
         // Phones and tablets: on a call's page the dock is there from the start, ready with this call (paused, at the
         // listener's place), so the call and its exhibits are always in reach. A call already in the dock stays;
         // closing the dock puts it away for the rest of this visit to the page.
