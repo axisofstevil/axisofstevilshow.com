@@ -15,4 +15,5 @@ $events->afterBuild([
     Services\LlmsFile::class,
     Services\Redirects::class,
     Services\Assets::class,
+    Services\Pagefind::class,
 ]);

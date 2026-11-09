@@ -33,6 +33,10 @@
             </div>
         </div>
         <div class="plate letter">
+            {{-- Search, from the home page too (the running head carries it everywhere else): the same dialog (master). --}}
+            <button class="search-open letter-search" type="button" data-search-open aria-label="Search the calls" title="Search (⌘K)">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="6.75" cy="6.75" r="4.75" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="M10.5 10.5 14.5 14.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+            </button>
             {{-- The featured series' letter, from its channel (its page at letter): its title the heading, its last paragraph
                  the signature. The site's own copy only without it. --}}
             @php $letter = $page->letter ? json_decode(json_encode($page->letter), true) : null; @endphp

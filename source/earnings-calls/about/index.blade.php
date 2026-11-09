@@ -5,7 +5,9 @@
 
 @section('body')
     <div class="spread" data-snap>
-        <article class="plate record">
+        <article class="plate record" data-pagefind-body>
+            <span hidden data-pagefind-meta="kind:Page"></span>
+            <span hidden data-pagefind-meta="image:{{ $page->cover }}"></span>
             <h1 class="work-title">About the calls</h1>
             <div class="work-body">
                 {{-- The show's description: this paragraph, and only this one, is what the feed sends to the directories
@@ -69,7 +71,7 @@
                 </dl>
             </section>
             @endif
-            <p class="caption">Plate 1 · About the calls</p>
+            <p class="caption" data-pagefind-ignore>Plate 1 · About the calls</p>
         </article>
         <aside class="plate notes">
             <div class="notes-inner">

@@ -697,10 +697,114 @@
         [...here, ...rows.filter((row) => !here.includes(row))].forEach((row) => list.appendChild(row));
     }
 
-    document.addEventListener('turbo:load', () => { lastChapter = -1; bindPage(); markApps(); window.axisSnap?.snap(); markTarget(); });
+    // Search, as the archive's: the dialog in every page (master), opened from the running head's button or ⌘K (Ctrl+K),
+    // closed by Esc, its button or the backdrop. The index (Pagefind, built over the finished pages into /pagefind/) loads
+    // when first asked; what is typed is searched as it is typed, and each result shows its title, what it is, a line of
+    // its words and its picture. The dialog is in the body, which Turbo swaps, so each visit binds its own.
+    let pagefindLoading = null;
+    let searchOpen = () => {};
+
+    function startSearch() {
+        const dialog = document.querySelector('[data-search]');
+        if (!dialog) return;
+        const input = dialog.querySelector('.search-input');
+        const status = dialog.querySelector('[data-search-status]');
+        const list = dialog.querySelector('[data-search-results]');
+        const open = () => {
+            if (!dialog.open) dialog.showModal();
+            input.focus();
+            input.select();
+        };
+        const load = () => (pagefindLoading ??= import('/pagefind/pagefind.js').then(async (pagefind) => {
+            await pagefind.init();
+            return pagefind;
+        }));
+        let latest = 0;
+
+        const render = async (term) => {
+            const run = ++latest;
+            // An emptied field clears at once and the dialog closes up to the field; otherwise the last results stay in
+            // place until the new ones arrive, the dialog holding its size.
+            if (term.trim() === '') {
+                list.replaceChildren();
+                status.textContent = '';
+                dialog.classList.remove('is-showing');
+                return;
+            }
+            const pagefind = await load();
+            const found = await pagefind.search(term);
+            if (run !== latest) return;
+            const results = await Promise.all(found.results.slice(0, 12).map((result) => result.data()));
+            if (run !== latest) return;
+
+            status.textContent = found.results.length === 0 ? 'Nothing on record for that.' : `${found.results.length} ${found.results.length === 1 ? 'result' : 'results'}`;
+            dialog.classList.add('is-showing');
+            list.replaceChildren();
+            results.forEach((result) => {
+                const item = document.createElement('li');
+                const link = document.createElement('a');
+                link.href = result.url;
+                link.className = 'search-result';
+                if (result.meta.image) {
+                    const picture = document.createElement('img');
+                    picture.src = result.meta.image;
+                    picture.alt = '';
+                    picture.loading = 'lazy';
+                    picture.className = 'search-picture';
+                    link.append(picture);
+                }
+                const words = document.createElement('span');
+                words.className = 'search-words';
+                const title = document.createElement('strong');
+                title.className = 'search-result-title';
+                title.textContent = result.meta.title || result.url;
+                const what = document.createElement('span');
+                what.className = 'search-what';
+                what.textContent = [result.meta.kind, result.meta.quarter].filter(Boolean).join(' · ');
+                const excerpt = document.createElement('span');
+                excerpt.className = 'search-excerpt';
+                excerpt.innerHTML = result.excerpt;
+                words.append(title, what, excerpt);
+                link.append(words);
+                item.append(link);
+                list.append(item);
+            });
+        };
+
+        let waiting = 0;
+        input.addEventListener('input', () => {
+            clearTimeout(waiting);
+            waiting = setTimeout(() => render(input.value), 250);
+        });
+        dialog.querySelector('.search-form').addEventListener('submit', (event) => {
+            event.preventDefault();
+            list.querySelector('a')?.click();
+        });
+        dialog.querySelector('[data-search-close]').addEventListener('click', () => dialog.close());
+        // Esc closes at once, even from the field, which would otherwise spend the first press clearing itself.
+        dialog.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') { event.preventDefault(); dialog.close(); }
+        });
+        // A click on the backdrop (outside the dialog's box) closes it; a result followed closes it too, before Turbo
+        // swaps the page under it.
+        dialog.addEventListener('click', (event) => {
+            if (event.target === dialog || event.target.closest('.search-result')) dialog.close();
+        });
+        document.querySelectorAll('[data-search-open]').forEach((button) => button.addEventListener('click', open));
+        searchOpen = open;
+    }
+
+    document.addEventListener('keydown', (event) => {
+        if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
+            event.preventDefault();
+            searchOpen();
+        }
+    });
+
+    document.addEventListener('turbo:load', () => { lastChapter = -1; bindPage(); markApps(); startSearch(); window.axisSnap?.snap(); markTarget(); });
     // The sheet's grid follows the window, and the pictures as they arrive.
     let resizing;
     window.addEventListener('resize', () => { clearTimeout(resizing); resizing = setTimeout(() => { window.axisSnap?.snap(); offerZoom(); alignTips(); }, 120); });
     document.addEventListener('load', (event) => { if (event.target.tagName === 'IMG') window.axisSnap?.snap(); }, true);
-    if (!window.Turbo) { bindPage(); markApps(); }
+    if (!window.Turbo) { bindPage(); markApps(); startSearch(); }
 })();

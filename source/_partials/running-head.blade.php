@@ -33,4 +33,8 @@
         <a class="running-archive" href="{{ $page->archiveUrl }}/">axisofstevil.com @include('_partials.arrow')</a>
         <a class="running-subscribe" href="/earnings-calls/subscribe/" @if ($path === '/earnings-calls/subscribe') aria-current="page" @endif>Subscribe</a>
     </nav>
+    {{-- Search: opens the dialog (master), which loads the index when first asked. --}}
+    <button class="search-open" type="button" data-search-open aria-label="Search the calls" title="Search (⌘K)">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="6.75" cy="6.75" r="4.75" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="M10.5 10.5 14.5 14.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+    </button>
 </header>

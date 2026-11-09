@@ -13,7 +13,13 @@
     @include('_partials.console', ['episode' => $page->toArray()])
 
     <div class="spread" data-snap>
-        <article class="plate record">
+        {{-- The call's record is what search indexes (Pagefind): its title, what it is, its quarter and picture said here,
+             since the call's heading sits in the console above. --}}
+        <article class="plate record" data-pagefind-body data-pagefind-sort="date:{{ $page->released_at }}">
+            <span hidden data-pagefind-meta="title:{{ $page->title }}"></span>
+            <span hidden data-pagefind-meta="kind:Call"></span>
+            <span hidden data-pagefind-meta="quarter:{{ $page->season_name }}, Part {{ $page->part }}"></span>
+            @if (isset($page->exhibits[0]['image']))<span hidden data-pagefind-meta="image:{{ $page->exhibits[0]['image'] }}"></span>@endif
             <div class="record-pair">
             <section class="record-part record-agenda" aria-labelledby="agenda-title">
                 <h2 class="section-title" id="agenda-title">Agenda</h2>
@@ -21,7 +27,7 @@
                     @foreach ($page->chapters as $chapter)
                         <li class="agenda-item">
                             <button type="button" class="agenda-button" data-seek="{{ $chapter['start'] }}">
-                                <span class="agenda-time">{{ $chapter['clock'] }}</span>
+                                <span class="agenda-time" data-pagefind-ignore>{{ $chapter['clock'] }}</span>
                                 <span class="agenda-title">{{ $chapter['title'] }}</span>
                                 @if ($chapter['exhibit'])<span class="agenda-exhibit">Ex. {{ $chapter['exhibit'] }}</span>@endif
                             </button>
@@ -40,7 +46,7 @@
                     <div class="remarks" @if ($part['start'] !== null) data-remarks-start="{{ $part['start'] }}" @endif>
                         <h3 class="remarks-head">
                             @if ($part['start'] !== null)
-                                <button type="button" class="remarks-seek" data-seek="{{ $part['start'] }}"><span class="remarks-time"><span class="remarks-now" aria-hidden="true"></span>{{ $length($part['start']) }}</span><span>{{ $part['title'] }}</span></button>
+                                <button type="button" class="remarks-seek" data-seek="{{ $part['start'] }}"><span class="remarks-time" data-pagefind-ignore><span class="remarks-now" aria-hidden="true"></span>{{ $length($part['start']) }}</span><span>{{ $part['title'] }}</span></button>
                             @else
                                 <span>{{ $part['title'] }}</span>
                             @endif
@@ -54,7 +60,7 @@
                     </div>
                 @endforeach
             </section>
-            <p class="caption">Plate 3 · The record</p>
+            <p class="caption" data-pagefind-ignore>Plate 3 · The record</p>
         </article>
 
         <aside class="plate notes" aria-labelledby="facts-title">
