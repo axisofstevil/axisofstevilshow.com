@@ -16,6 +16,18 @@ class Feed
 {
     public const string DISCLOSURE = 'The CFO\'s voice is synthetic, and his remarks were written with assistance from AI. The archive\'s works were written by people.';
 
+    /**
+     * The audio's address tagged with its version (?v=, the start of its SHA-256; its size until Alfred sends that), so
+     * a replaced file is a new address: Apple Podcasts fetches it afresh, where it would keep its copy of the old one
+     * (owner, 2026-11-09). The episode's guid is unchanged, so it stays the same episode.
+     */
+    public static function versioned(array|\ArrayAccess $audio): string
+    {
+        $version = isset($audio['sha256']) && $audio['sha256'] !== '' ? substr((string) $audio['sha256'], 0, 10) : (string) $audio['bytes'];
+
+        return $audio['url'].(str_contains((string) $audio['url'], '?') ? '&' : '?').'v='.$version;
+    }
+
     public function handle(Jigsaw $jigsaw): void
     {
         $base = rtrim((string) $jigsaw->getConfig('baseUrl'), '/');
@@ -39,7 +51,7 @@ class Feed
                 '<guid isPermaLink="false">'.$x($e['id']).'</guid>',
                 '<pubDate>'.$x($e['released_rfc']).'</pubDate>',
                 '<description><![CDATA['.$notes.']]></description>',
-                '<enclosure url="'.$x($e['audio']['url']).'" length="'.(int) $e['audio']['bytes'].'" type="'.$x($e['audio']['type'] ?? 'audio/mpeg').'"/>',
+                '<enclosure url="'.$x(self::versioned($e['audio'])).'" length="'.(int) $e['audio']['bytes'].'" type="'.$x($e['audio']['type'] ?? 'audio/mpeg').'"/>',
                 '<itunes:title>'.$x($e['title']).'</itunes:title>',
                 '<itunes:duration>'.(int) round($e['duration']).'</itunes:duration>',
                 '<itunes:season>'.(int) $e['season'].'</itunes:season>',
