@@ -1005,7 +1005,10 @@ code { font: 500 0.9375rem/1.4 var(--display); letter-spacing: 0.02em; backgroun
     .home-title { font-size: clamp(2.75rem, 13vw, 3.75rem); }
     .figures { column-gap: var(--pad); }
     .figures dd { font-size: 2rem; }
-    .current-head { align-items: flex-start; }
+    /* The current call's title takes the plate's whole width on a phone, the play button above it, sized so the
+       longest title word ("Observaphobia") fits a 320px screen; a still longer word breaks rather than overflows. */
+    .current-head { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .current-title { font-size: clamp(1.75rem, 8.5vw, 2.75rem); overflow-wrap: break-word; hyphens: auto; }
     .agenda-button { grid-template-columns: 3.25rem minmax(0, 1fr) auto; gap: 12px; }
     .colophon nav { justify-content: flex-start; }
     /* Room for a thumb: each link a 24px target at least. */
