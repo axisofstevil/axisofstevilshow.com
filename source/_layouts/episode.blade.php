@@ -19,7 +19,8 @@
             <span hidden data-pagefind-meta="title:{{ $page->title }}"></span>
             <span hidden data-pagefind-meta="kind:Call"></span>
             <span hidden data-pagefind-meta="quarter:{{ $page->season_name }}, Part {{ $page->part }}"></span>
-            @if (isset($page->exhibits[0]['image']))<span hidden data-pagefind-meta="image:{{ $page->exhibits[0]['image'] }}"></span>@endif
+            {{-- Its first exhibit, else a blank tile of the sheet, which should not draw the eye. --}}
+            <span hidden data-pagefind-meta="image:{{ $page->exhibits[0]['image'] ?? '/assets/search/no-picture.svg' }}"></span>
             <div class="record-pair">
             <section class="record-part record-agenda" aria-labelledby="agenda-title">
                 <h2 class="section-title" id="agenda-title">Agenda</h2>

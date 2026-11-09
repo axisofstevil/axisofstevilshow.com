@@ -7,7 +7,9 @@
     <div class="spread" data-snap>
         <article class="plate record" data-pagefind-body>
             <span hidden data-pagefind-meta="kind:Page"></span>
-            <span hidden data-pagefind-meta="image:{{ $page->cover }}"></span>
+            {{-- No picture of its own: a blank tile of the sheet, which should not draw the eye (Pagefind would otherwise take
+                 the first picture anywhere on the page). --}}
+            <span hidden data-pagefind-meta="image:/assets/search/no-picture.svg"></span>
             <h1 class="work-title">About the calls</h1>
             <div class="work-body">
                 {{-- The show's description: this paragraph, and only this one, is what the feed sends to the directories
