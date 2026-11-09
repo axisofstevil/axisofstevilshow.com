@@ -8,7 +8,7 @@ use TightenCo\Jigsaw\PageVariable;
  * Each page's structured data (schema.org, as JSON-LD): what the show is, for search engines and answer engines. Every
  * page names the website and the podcast, "The Axis of Stevil Show", as their own entities, distinct from the archive
  * (The Axis of Stevil, at axisofstevil.com), which publishes them; the archive's organisation is referred to by the
- * archive's own @id, so the two sites describe one company. A call's page is a PodcastEpisode in its season and series;
+ * archive's own @id, so the two sites describe one company. The podcast names its pages in the directories (sameAs). A call's page is a PodcastEpisode in its season and series;
  * it names the archive's works it covers by the archive's own ids, and its chapters as clips, each at its moment (the
  * player cues a call at ?t= seconds); the calls are an ItemList; About is an AboutPage. Pages marked noindex carry none.
  */
@@ -61,7 +61,7 @@ class StructuredData
                 'author' => ['@id' => $organisation['@id']],
                 'publisher' => ['@id' => $organisation['@id']],
                 'isBasedOn' => ['@type' => 'WebSite', 'name' => 'The Axis of Stevil', 'url' => $archive.'/'],
-                ...self::listings($show),
+                ...self::listings($show, $page->subscribe_links),
             ],
         ];
 
@@ -142,13 +142,17 @@ class StructuredData
     }
 
     /**
-     * The show's pages in the directories, once listed: the same podcast, elsewhere.
+     * The show's pages in the directories: the same podcast, elsewhere. The site's own listings, and each subscribe
+     * link the channel offers that is a web page of its own (a YouTube playlist, an Apple Podcasts page), not one that
+     * hands an app the feed (a {feed}, {host} or {title} template, or an app's own scheme).
      *
      * @return array<string, list<string>>
      */
-    private static function listings(mixed $show): array
+    private static function listings(mixed $show, mixed $subscribeLinks): array
     {
-        $listings = array_values(array_filter(self::rows($show->listings ?? [])));
+        $offered = array_column(self::rows($subscribeLinks), 'link');
+        $pages = array_filter($offered, fn ($link) => is_string($link) && preg_match('#^https://#', $link) && ! str_contains($link, '{'));
+        $listings = array_values(array_unique(array_filter([...self::rows($show->listings ?? []), ...$pages])));
 
         return $listings === [] ? [] : ['sameAs' => $listings];
     }
