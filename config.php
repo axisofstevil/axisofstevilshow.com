@@ -40,6 +40,9 @@ return [
         'author' => 'The Axis of Stevil',
         // The show's owner, for the directories (Apple Podcasts sends its verification code here). Public: it is in the feed.
         'owner_email' => 'shows@axisofstevil.com',
+        // The podcast's permanent id (Podcasting 2.0 podcast:guid): the UUIDv5 of the feed's address, without its scheme,
+        // in the podcast namespace, worked out once on 2026-11-12 and kept, so it stays the show's id if the feed moves.
+        'guid' => 'b7079cee-38d2-55c3-a4d3-bb736bdd41a4',
         'category' => 'Comedy',
         'language' => 'en-us',
         // The show's pages in the directories, by app name, once it is listed: a listing replaces the app's own

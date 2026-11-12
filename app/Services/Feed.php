@@ -7,8 +7,9 @@ use TightenCo\Jigsaw\Jigsaw;
 /**
  * The series' podcast feed (/earnings-calls/feed.xml) the directories read: the series, titled as they list it, then every
  * released episode, newest first (the show is episodic). iTunes tags for
- * Apple and Spotify; Podcasting 2.0 tags for the chapters, the transcript and
- * the season's name. Every episode's description ends with the disclosure:
+ * Apple and Spotify; Podcasting 2.0 tags for the show's permanent id, the
+ * lock that keeps another host from importing the feed, the chapters, the
+ * transcript and the season's name. Every episode's description ends with the disclosure:
  * the CFO's voice is synthetic and his remarks were written with assistance
  * from AI (Apple Podcasts' guidelines, 1.11).
  */
@@ -93,6 +94,8 @@ class Feed
     <itunes:category text="{$x($show['category'])}"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>episodic</itunes:type>
+    <podcast:guid>{$x($show['guid'])}</podcast:guid>
+    <podcast:locked owner="{$x($show['owner_email'])}">yes</podcast:locked>
     <podcast:txt purpose="ai-disclosure">{$x(self::DISCLOSURE)}</podcast:txt>
 {$items}
   </channel>
