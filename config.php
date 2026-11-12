@@ -45,6 +45,8 @@ return [
         // The show's pages in the directories, by app name, once it is listed: a listing replaces the app's own
         // link below, and an app with no link of its own (Spotify) is offered only once it has one.
         'listings' => [],
+        // The podcast's item on Wikidata: one more page that is the podcast, for its structured data (sameAs) only.
+        'wikidata' => 'https://www.wikidata.org/wiki/Q142119467',
         // The apps the subscribe page offers, in order: each one's link hands it the feed ({feed}, {host}: the
         // feed's address, whole and without its scheme; {title}: the show's), and its platforms put it first
         // on a device it runs on.
