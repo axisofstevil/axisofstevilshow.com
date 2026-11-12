@@ -8,12 +8,16 @@ use TightenCo\Jigsaw\PageVariable;
  * Each page's structured data (schema.org, as JSON-LD): what the show is, for search engines and answer engines. Every
  * page names the website and the podcast, "The Axis of Stevil Show", as their own entities, distinct from the archive
  * (The Axis of Stevil, at axisofstevil.com), which publishes them; the archive's organisation is referred to by the
- * archive's own @id, so the two sites describe one company. The podcast names its pages in the directories (sameAs). A call's page is a PodcastEpisode in its season and series;
+ * archive's own @id, so the two sites describe one company. Both say what sets them apart from the unrelated radio show of
+ * the same name (disambiguatingDescription). The podcast names its pages in the directories (sameAs). A call's page is a PodcastEpisode in its season and series;
  * it names the archive's works it covers by the archive's own ids, and its chapters as clips, each at its moment (the
  * player cues a call at ?t= seconds); the calls are an ItemList; About is an AboutPage. Pages marked noindex carry none.
  */
 class StructuredData
 {
+    /** What sets the show apart from the unrelated radio show of the same name (owner, 2026-11-12). */
+    private const string DISAMBIGUATION = 'An audio series begun in 2026 that reads the archive of axisofstevil.com (2005 to 2007). Not the weekly radio show of the same name at theaxisofstevilshow.com.';
+
     /**
      * @return array<string, mixed>
      */
@@ -43,6 +47,7 @@ class StructuredData
                 'alternateName' => 'Axis of Stevil Show',
                 // The banner's own description (its channel's), the featured series' only until it has one.
                 'description' => (string) ($page->site_description ?: $show->description),
+                'disambiguatingDescription' => self::DISAMBIGUATION,
                 'inLanguage' => 'en-US',
                 'publisher' => ['@id' => $organisation['@id']],
             ],
@@ -54,6 +59,7 @@ class StructuredData
                 'alternateName' => (string) $page->series->name,
                 'url' => $base.'/earnings-calls/',
                 'description' => (string) $show->description,
+                'disambiguatingDescription' => self::DISAMBIGUATION,
                 'image' => (string) $page->cover,
                 'webFeed' => $base.'/earnings-calls/feed.xml',
                 'inLanguage' => 'en-US',
