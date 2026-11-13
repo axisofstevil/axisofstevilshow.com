@@ -158,7 +158,7 @@ class StructuredData
     {
         $offered = array_column(self::rows($subscribeLinks), 'link');
         $pages = array_filter($offered, fn ($link) => is_string($link) && preg_match('#^https://#', $link) && ! str_contains($link, '{'));
-        $listings = array_values(array_unique(array_filter([...self::rows($show->listings ?? []), ...$pages, $show->wikidata ?? null])));
+        $listings = array_values(array_unique(array_filter([...self::rows($show->listings ?? []), ...$pages, ...self::rows($show->directories ?? [])])));
 
         return $listings === [] ? [] : ['sameAs' => $listings];
     }
