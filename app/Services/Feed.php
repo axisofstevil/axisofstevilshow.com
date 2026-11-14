@@ -18,7 +18,7 @@ class Feed
     public const string DISCLOSURE = 'The CFO\'s voice is synthetic, and his remarks were written with assistance from AI. The archive\'s works were written by people.';
 
     /**
-     * The audio's address tagged with its version (?v=, the start of its SHA-256; its size until Alfred sends that), so
+     * The audio's address tagged with its version (?v=, the start of its SHA-256; its size until the CMS sends that), so
      * a replaced file is a new address: Apple Podcasts fetches it afresh, where it would keep its copy of the old one
      * (owner, 2026-11-09). The episode's guid is unchanged, so it stays the same episode.
      */
