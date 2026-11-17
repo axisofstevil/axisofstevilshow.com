@@ -874,22 +874,24 @@ code { font: 500 0.9375rem/1.4 var(--display); letter-spacing: 0.02em; backgroun
    exhibits as the packet's tabs. It rises over the page and never takes the page's scroll; the call plays on. */
 /* The well the drawer slides in: from the dock's top edge up, clipped there, so the drawer rises from behind the dock. */
 .drawer-well { position: absolute; left: 0; right: 0; bottom: 100%; height: 100dvh; overflow: hidden; pointer-events: none; }
-.drawer { position: absolute; left: 0; right: 0; bottom: 0; pointer-events: auto; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; max-height: calc(100dvh - var(--dock, 0px) - 24px); padding: 10px max(var(--margin), var(--sheet-left)) var(--pad); background: var(--stock-light); color: var(--ink); box-shadow: inset 0 1px 0 var(--ink), 0 -12px 28px rgba(17, 17, 17, 0.22); transform: translateY(100%); opacity: 0; transition: transform 0.26s var(--ease), opacity 0.2s var(--ease); }
+.drawer { position: absolute; left: 0; right: 0; bottom: 0; pointer-events: auto; display: flex; flex-direction: column; max-height: calc(100dvh - var(--dock, 0px) - 24px); padding: 10px max(var(--margin), var(--sheet-left)) var(--pad); background: var(--stock-light); color: var(--ink); box-shadow: inset 0 1px 0 var(--ink), 0 -12px 28px rgba(17, 17, 17, 0.22); transform: translateY(100%); opacity: 0; transition: transform 0.26s var(--ease), opacity 0.2s var(--ease); }
 .drawer.is-open { transform: none; opacity: 1; }
 .drawer[hidden] { display: none; }
-.drawer-head { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 12px 0 10px; touch-action: none; }
+.drawer-head { flex: none; position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 12px 0 10px; touch-action: none; }
 .drawer-grabber { position: absolute; top: 0; left: 50%; width: 40px; height: 4px; margin-left: -20px; background: var(--major); border-radius: 2px; }
 .drawer-caption { margin: 0; display: grid; gap: 2px; min-width: 0; }
 .drawer-title { font: 500 1rem/1.3 var(--display); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .drawer-close { width: 44px; height: 44px; border: 0; box-shadow: inset 0 0 0 1px var(--ink); background: transparent; color: var(--ink); cursor: pointer; display: grid; place-items: center; }
 .drawer-close:hover { background: var(--stock); }
 .drawer-close svg { width: 14px; height: 14px; stroke: currentColor; stroke-width: 1.6; fill: none; }
-.drawer-picture { --drawer-h: min(52dvh, 420px); position: relative; min-height: 0; height: var(--drawer-h); display: grid; place-items: center; overflow: hidden; background: radial-gradient(circle at 1px 1px, rgba(17, 17, 17, 0.09) 0.8px, transparent 1.2px) 0 0 / 6px 6px, var(--stock); }
+/* Its picture gives way when the window is short: it shrinks to leave the head and the tabs their room, and the
+   exhibit fits the box it is left (a size container, so the image measures that box and not the 420px it asked for). */
+.drawer-picture { --drawer-h: min(52dvh, 420px); flex: 0 1 auto; position: relative; min-height: 0; height: var(--drawer-h); container-type: size; display: grid; place-items: center; overflow: hidden; background: radial-gradient(circle at 1px 1px, rgba(17, 17, 17, 0.09) 0.8px, transparent 1.2px) 0 0 / 6px 6px, var(--stock); }
 .drawer-picture::after { content: ""; position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 0 1px var(--ink); }
-.drawer-picture img { max-width: 100%; max-height: var(--drawer-h); width: auto; height: auto; object-fit: contain; }
+.drawer-picture img { max-width: 100cqw; max-height: 100cqh; width: auto; height: auto; object-fit: contain; }
 .drawer-picture.can-zoom img { cursor: zoom-in; }
 .drawer-picture.is-turning img { animation: turn 0.45s var(--ease) both; }
-.drawer-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 12px var(--pad); padding-top: 12px; }
+.drawer-foot { flex: none; display: flex; flex-wrap: wrap; align-items: center; gap: 12px var(--pad); padding-top: 12px; }
 .drawer-tabs { display: flex; flex-wrap: wrap; }
 .drawer-tabs .packet-tab { width: 44px; height: 44px; }
 .drawer-follow { height: 44px; padding: 0 14px; border: 0; background: var(--ink); color: var(--stock-light); cursor: pointer; font: 600 0.75rem/1 var(--display); letter-spacing: 0.12em; text-transform: uppercase; }
