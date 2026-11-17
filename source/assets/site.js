@@ -725,8 +725,10 @@
         const input = dialog.querySelector('.search-input');
         const status = dialog.querySelector('[data-search-status]');
         const list = dialog.querySelector('[data-search-results]');
+        // Opened as a modal unless it already is one: a dialog that came back from Turbo's cache still marked open is
+        // only drawn in the page's flow, at its foot, so it is closed and opened again as a modal.
         const open = () => {
-            if (!dialog.open) dialog.showModal();
+            if (!dialog.matches(':modal')) { dialog.close(); dialog.showModal(); }
             input.focus();
             input.select();
         };
@@ -816,6 +818,9 @@
         }
     });
 
+    // Turbo keeps a copy of each page it leaves, to show on Back: never with a dialog open in it (search, a zoomed
+    // picture), which would come back drawn in the page's flow rather than over it.
+    document.addEventListener('turbo:before-cache', () => document.querySelectorAll('dialog[open]').forEach((dialog) => dialog.close()));
     document.addEventListener('turbo:load', () => { lastChapter = -1; bindPage(); markApps(); startSearch(); window.axisSnap?.snap(); markTarget(); });
     // The sheet's grid follows the window, and the pictures as they arrive.
     let resizing;
