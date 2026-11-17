@@ -332,8 +332,16 @@
     drawer.querySelector('[data-drawer-image]').addEventListener('click', () => { if (drawer.querySelector('.drawer-picture').classList.contains('can-zoom')) zoomFromDrawer(); });
     drawer.querySelector('[data-drawer-image]').addEventListener('load', offerDrawerZoom);
 
+    // The drawer's room: from the top of what the window shows down to the dock, less a margin, measured on screen.
+    const measureDrawerRoom = () => {
+        const top = window.visualViewport ? window.visualViewport.offsetTop : 0;
+        drawer.style.setProperty('--drawer-room', Math.max(0, Math.floor(dock.getBoundingClientRect().top - top - 24)) + 'px');
+    };
+    window.visualViewport?.addEventListener('resize', () => { if (!drawer.hidden) measureDrawerRoom(); });
+
     function openDrawer() {
         drawer.hidden = false;
+        measureDrawerRoom();
         renderDrawer(true);
         drawerOpener.setAttribute('aria-expanded', 'true');
         requestAnimationFrame(() => drawer.classList.add('is-open'));
@@ -378,7 +386,7 @@
     });
 
     // The page keeps room for the dock at its foot: the dock's own height, measured, whatever its rows.
-    if ('ResizeObserver' in window) new ResizeObserver(() => { if (!dock.hidden) document.body.style.setProperty('--dock', Math.ceil(dock.getBoundingClientRect().height) + 'px'); }).observe(dock);
+    if ('ResizeObserver' in window) new ResizeObserver(() => { if (!dock.hidden) document.body.style.setProperty('--dock', Math.ceil(dock.getBoundingClientRect().height) + 'px'); if (!drawer.hidden) measureDrawerRoom(); }).observe(dock);
 
     // The drawer is for narrow windows: widened past them, it closes.
     matchMedia('(min-width: 1101px)').addEventListener('change', (event) => { if (event.matches) closeDrawer(false); });
